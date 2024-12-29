@@ -217,14 +217,30 @@
         }
 
         @media (max-width: 768px) {
+            /* Main navigation buttons */
             nav ul {
                 flex-direction: column;
                 text-align: center;
                 gap: 1rem;
             }
 
+            /* Project grid */
             .projects-grid {
                 grid-template-columns: 1fr;
+            }
+
+            /* Info buttons specific mobile styling */
+            .info-buttons {
+                display: flex;
+                flex-direction: row; /* Force horizontal layout */
+                justify-content: center;
+                gap: 1rem;
+            }
+
+            .info-button {
+                flex: 0 1 auto; /* Allow buttons to shrink but not grow */
+                min-width: 120px; /* Minimum width */
+                padding: 0.8rem 1.5rem;
             }
         }
     </style>
