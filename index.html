@@ -249,12 +249,173 @@
 
     <section id="about" class="active">
         <div class="container">
-            <h2>About Me</h2>
-            <p>As a passionate game development student at Full Sail University, I'm dedicated to crafting experiences that bring joy to players' lives. My focus lies in creating engaging gameplay mechanics that turn simple interactions into unforgettable moments. Every project is an opportunity to push the boundaries of what makes games fun and memorable.</p>
+            <h2 class="text-center">About Me</h2>
+            <p class="about-text">As a passionate game development student at Full Sail University, I'm dedicated to crafting experiences that bring joy to players' lives. My focus lies in creating engaging gameplay mechanics that turn simple interactions into unforgettable moments. Every project is an opportunity to push the boundaries of what makes games fun and memorable.</p>
             
-            <p>Through my journey at Full Sail, I've developed a strong foundation in both the technical and creative aspects of game development. I believe that great games come from understanding not just how to code them, but how to make them resonate with players.</p>
+            <p class="about-text">Through my journey at Full Sail, I've developed a strong foundation in both the technical and creative aspects of game development. I believe that great games come from understanding not just how to code them, but how to make them resonate with players.</p>
+
+            <div class="info-buttons">
+                <button onclick="toggleInfo('education')" class="info-button">Education</button>
+                <button onclick="toggleInfo('career')" class="info-button">Career</button>
+            </div>
+
+            <div id="education-info" class="info-section">
+                <div class="info-image-container">
+                    <img src="images/fullsail.jpg" alt="Full Sail University" class="info-image">
+                </div>
+                <div class="info-content">
+                    <h3 class="institution-name">Full Sail University</h3>
+                    <h4 class="degree-name">Bachelor's Degree in Game Development</h4>
+                    <p class="education-description">
+                        In this comprehensive degree program, I've gained extensive experience in game development fundamentals and advanced concepts. My education has encompassed:
+                    </p>
+                    <ul class="education-highlights">
+                        <li>Mastering C++ programming for game development, including projects with Unity, Unreal Engine, and direct implementation using Vulkan 3D API</li>
+                        <li>Creating 3D renders with Vulkan, developing AI systems, and implementing computer networks</li>
+                        <li>Building a server-client console application using Winsock for networking fundamentals</li>
+                        <li>Collaborating in Agile development environments, participating in sprint planning, daily standups, and utilizing Git for version control</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div id="career-info" class="info-section">
+                <div class="info-image-container">
+                    <img src="images/thenetvr.png" alt="TheNetVR" class="info-image">
+                </div>
+                <div class="info-content">
+                    <h3 class="company-name">TheNetVR</h3>
+                    <h4 class="position-title">Unity Developer Intern</h4>
+                    <p class="career-description">
+                        Working within Unity in collaborative team environments to handle various aspects of our projects. Contributing to development sprints and participating in regular team communications to ensure project success.
+                    </p>
+                </div>
+            </div>
         </div>
     </section>
+
+    <style>
+        .text-center {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+
+        .about-text {
+            max-width: 800px;
+            margin: 0 auto 1.5rem;
+            text-align: center;
+        }
+
+        .info-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin: 2rem 0;
+            flex-wrap: nowrap; /* Prevents wrapping on mobile */
+        }
+
+        .info-button {
+            background: var(--accent-color);
+            color: white;
+            padding: 0.8rem 2rem;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 1rem;
+            transition: transform 0.2s ease, opacity 0.2s ease;
+            min-width: 120px; /* Ensures minimum button width */
+        }
+
+        @media (max-width: 768px) {
+            .info-buttons {
+                gap: 1rem; /* Reduced gap on mobile */
+            }
+            
+            .info-button {
+                padding: 0.8rem 1rem; /* Smaller padding on mobile */
+            }
+        }
+
+        .info-button:hover {
+            transform: translateY(-2px);
+        }
+
+        .info-section {
+            display: none;
+            animation: fadeIn 0.5s ease-in;
+            max-width: 800px;
+            margin: 2rem auto;
+        }
+
+        .info-image-container {
+            margin-bottom: 2rem;
+            text-align: center;
+        }
+
+        .info-image {
+            max-width: 100%;
+            height: auto;
+            border: 8px solid var(--accent-color);
+            border-radius: 8px;
+        }
+
+        .info-content {
+            padding: 0 1rem;
+        }
+
+        .institution-name, .company-name {
+            font-size: 1.8rem;
+            font-weight: bold;
+            margin-bottom: 0.5rem;
+            text-align: center;
+            color: var(--primary-color);
+        }
+
+        .degree-name, .position-title {
+            font-size: 1.3rem;
+            color: var(--accent-color);
+            margin-bottom: 1.5rem;
+            text-align: center;
+        }
+
+        .education-description, .career-description {
+            margin-bottom: 1.5rem;
+            line-height: 1.8;
+        }
+
+        .education-highlights {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .education-highlights li {
+            margin-bottom: 1rem;
+            padding-left: 1.5rem;
+            position: relative;
+        }
+
+        .education-highlights li:before {
+            content: "•";
+            color: var(--accent-color);
+            font-weight: bold;
+            position: absolute;
+            left: 0;
+        }
+    </style>
+
+    <script>
+        function toggleInfo(type) {
+            const educationInfo = document.getElementById('education-info');
+            const careerInfo = document.getElementById('career-info');
+            
+            if (type === 'education') {
+                educationInfo.style.display = educationInfo.style.display === 'block' ? 'none' : 'block';
+                careerInfo.style.display = 'none';
+            } else {
+                careerInfo.style.display = careerInfo.style.display === 'block' ? 'none' : 'block';
+                educationInfo.style.display = 'none';
+            }
+        }
+    </script>
 
     <section id="projects">
         <div class="container">
