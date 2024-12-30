@@ -4,246 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Thomas Claiborne - Game Developer Portfolio</title>
-    <style>
-        :root {
-            --primary-color: #2d3436;
-            --accent-color: #0984e3;
-            --text-color: #2d3436;
-            --background-color: #ffffff;
-            --section-bg: #f5f6fa;
-        }
-
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            line-height: 1.6;
-            color: var(--text-color);
-            background-color: var(--background-color);
-        }
-
-        header {
-            background-color: var(--primary-color);
-            color: white;
-            text-align: center;
-            padding: 4rem 2rem;
-        }
-
-        .profile-container {
-            margin: 2rem auto;
-            width: 200px;
-            height: 200px;
-            position: relative;
-        }
-
-        .profile-image {
-            width: 100%;
-            height: 100%;
-            border-radius: 50%;
-            object-fit: cover;
-            border: 8px solid var(--accent-color);
-        }
-
-        nav {
-            background-color: var(--primary-color);
-            padding: 1rem;
-            position: sticky;
-            top: 0;
-            z-index: 100;
-        }
-
-        nav ul {
-            list-style: none;
-            display: flex;
-            justify-content: center;
-            gap: 2rem;
-        }
-
-        nav a {
-            color: white;
-            text-decoration: none;
-            font-weight: 500;
-            cursor: pointer;
-        }
-
-        nav a:hover {
-            color: var(--accent-color);
-        }
-
-        section {
-            padding: 4rem 2rem;
-            display: none;
-            animation: fadeIn 0.5s ease-in;
-        }
-
-        section.active {
-            display: block;
-        }
-
-        @keyframes fadeIn {
-            from { opacity: 0; }
-            to { opacity: 1; }
-        }
-
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-
-        .projects-grid {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 2rem;
-            margin-top: 2rem;
-        }
-
-        .project-card {
-            background: white;
-            border-radius: 8px;
-            overflow: hidden;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-            transition: transform 0.3s ease;
-            cursor: pointer;
-            display: flex;
-            height: 150px;
-        }
-
-        .project-card:hover {
-            transform: translateY(-5px);
-        }
-
-        .project-thumbnail {
-            width: 40%;
-            object-fit: cover;
-        }
-
-        .project-preview {
-            padding: 1.5rem;
-            width: 60%;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-        }
-
-        .project-details {
-            display: none;
-            padding: 2rem;
-            background: white;
-            border-radius: 8px;
-            margin-top: 2rem;
-            animation: fadeIn 0.5s ease-in;
-        }
-
-        .project-details.active {
-            display: block;
-        }
-
-        .project-gallery {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 1rem;
-            margin: 2rem 0;
-        }
-
-        .gallery-item {
-            width: 100%;
-            height: 200px;
-            object-fit: cover;
-            border-radius: 4px;
-        }
-
-        .back-button {
-            background: var(--accent-color);
-            color: white;
-            padding: 0.5rem 1rem;
-            border: none;
-            border-radius: 4px;
-            cursor: pointer;
-            margin-bottom: 1rem;
-        }
-
-        .skills-list {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 1rem;
-            margin-top: 1rem;
-        }
-
-        .skill-tag {
-            background: var(--accent-color);
-            color: white;
-            padding: 0.5rem 1rem;
-            border-radius: 20px;
-            font-size: 0.9rem;
-        }
-
-        .contact-form {
-            display: grid;
-            gap: 1rem;
-            max-width: 600px;
-            margin: 2rem auto;
-        }
-
-        input, textarea {
-            padding: 0.8rem;
-            border: 1px solid #ddd;
-            border-radius: 4px;
-        }
-
-        button {
-            background: var(--accent-color);
-            color: white;
-            padding: 0.8rem 1.5rem;
-            border: none;
-            border-radius: 4px;
-            cursor: pointer;
-            font-size: 1rem;
-        }
-
-        button:hover {
-            opacity: 0.9;
-        }
-
-        footer {
-            background: var(--primary-color);
-            color: white;
-            text-align: center;
-            padding: 2rem;
-            margin-top: 2rem;
-        }
-
-        @media (max-width: 768px) {
-            /* Main navigation buttons */
-            nav ul {
-                flex-direction: column;
-                text-align: center;
-                gap: 1rem;
-            }
-
-            /* Project grid */
-            .projects-grid {
-                grid-template-columns: 1fr;
-            }
-
-            /* Info buttons specific mobile styling */
-            .info-buttons {
-                display: flex;
-                flex-direction: row; /* Force horizontal layout */
-                justify-content: center;
-                gap: 1rem;
-            }
-
-            .info-button {
-                flex: 0 1 auto; /* Allow buttons to shrink but not grow */
-                min-width: 120px; /* Minimum width */
-                padding: 0.8rem 1.5rem;
-            }
-        }
-    </style>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header>
@@ -309,130 +70,6 @@
         </div>
     </section>
 
-    <style>
-        .text-center {
-            text-align: center;
-            margin-bottom: 2rem;
-        }
-
-        .about-text {
-            max-width: 800px;
-            margin: 0 auto 1.5rem;
-            text-align: center;
-        }
-
-        .info-buttons {
-            display: flex;
-            justify-content: center;
-            gap: 2rem;
-            margin: 2rem 0;
-            flex-wrap: nowrap; /* Prevents wrapping on mobile */
-        }
-
-        .info-button {
-            background: var(--accent-color);
-            color: white;
-            padding: 0.8rem 2rem;
-            border: none;
-            border-radius: 4px;
-            cursor: pointer;
-            font-size: 1rem;
-            transition: transform 0.2s ease, opacity 0.2s ease;
-            min-width: 120px; /* Ensures minimum button width */
-        }
-
-        @media (max-width: 768px) {
-            .info-buttons {
-                gap: 1rem; /* Reduced gap on mobile */
-            }
-            
-            .info-button {
-                padding: 0.8rem 1rem; /* Smaller padding on mobile */
-            }
-        }
-
-        .info-button:hover {
-            transform: translateY(-2px);
-        }
-
-        .info-section {
-            display: none;
-            animation: fadeIn 0.5s ease-in;
-            max-width: 800px;
-            margin: 2rem auto;
-        }
-
-        .info-image-container {
-            margin-bottom: 2rem;
-            text-align: center;
-        }
-
-        .info-image {
-            max-width: 100%;
-            height: auto;
-            border: 8px solid var(--accent-color);
-            border-radius: 8px;
-        }
-
-        .info-content {
-            padding: 0 1rem;
-        }
-
-        .institution-name, .company-name {
-            font-size: 1.8rem;
-            font-weight: bold;
-            margin-bottom: 0.5rem;
-            text-align: center;
-            color: var(--primary-color);
-        }
-
-        .degree-name, .position-title {
-            font-size: 1.3rem;
-            color: var(--accent-color);
-            margin-bottom: 1.5rem;
-            text-align: center;
-        }
-
-        .education-description, .career-description {
-            margin-bottom: 1.5rem;
-            line-height: 1.8;
-        }
-
-        .education-highlights {
-            list-style-type: none;
-            padding: 0;
-        }
-
-        .education-highlights li {
-            margin-bottom: 1rem;
-            padding-left: 1.5rem;
-            position: relative;
-        }
-
-        .education-highlights li:before {
-            content: "•";
-            color: var(--accent-color);
-            font-weight: bold;
-            position: absolute;
-            left: 0;
-        }
-    </style>
-
-    <script>
-        function toggleInfo(type) {
-            const educationInfo = document.getElementById('education-info');
-            const careerInfo = document.getElementById('career-info');
-            
-            if (type === 'education') {
-                educationInfo.style.display = educationInfo.style.display === 'block' ? 'none' : 'block';
-                careerInfo.style.display = 'none';
-            } else {
-                careerInfo.style.display = careerInfo.style.display === 'block' ? 'none' : 'block';
-                educationInfo.style.display = 'none';
-            }
-        }
-    </script>
-
     <section id="projects">
         <div class="container">
             <h2>Featured Projects</h2>
@@ -482,7 +119,7 @@
                 </div>
             </div>
 
-            <!-- Repeat for other projects -->
+            <!-- Other project details sections -->
             <div id="project2-details" class="project-details">
                 <!-- Similar structure to project1-details -->
             </div>
@@ -497,14 +134,152 @@
 
     <section id="skills">
         <div class="container">
-            <h2>Skills & Technologies</h2>
-            <div class="skills-list">
-                <span class="skill-tag">C++</span>
-                <span class="skill-tag">Unreal Engine</span>
-                <span class="skill-tag">Unity</span>
-                <span class="skill-tag">Game Design</span>
-                <span class="skill-tag">3D Modeling</span>
-                <span class="skill-tag">Version Control</span>
+            <h2>Skills & Expertise</h2>
+            <div class="skills-container">
+                <!-- Programming Languages -->
+                <div class="skill-category">
+                    <h3 class="category-title">Programming Languages</h3>
+                    <div class="skill-item">
+                        <div class="skill-header">
+                            <span class="skill-name">C++</span>
+                        </div>
+                        <div class="skill-bar-container">
+                            <div class="skill-bar" style="width: 70%">
+                                <span class="skill-percentage">70%</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-header">
+                            <span class="skill-name">C#</span>
+                        </div>
+                        <div class="skill-bar-container">
+                            <div class="skill-bar" style="width: 75%">
+                                <span class="skill-percentage">75%</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Game Engines -->
+                <div class="skill-category">
+                    <h3 class="category-title">Game Engines</h3>
+                    <div class="skill-item">
+                        <div class="skill-header">
+                            <span class="skill-name">Unity</span>
+                        </div>
+                        <div class="skill-bar-container">
+                            <div class="skill-bar" style="width: 60%">
+                                <span class="skill-percentage">60%</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-header">
+                            <span class="skill-name">Unreal Engine</span>
+                        </div>
+                        <div class="skill-bar-container">
+                            <div class="skill-bar" style="width: 20%">
+                                <span class="skill-percentage">20%</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Development Practices -->
+                <div class="skill-category">
+                    <h3 class="category-title">Development Practices</h3>
+                    <div class="skill-item">
+                        <div class="skill-header">
+                            <span class="skill-name">Agile Scrum</span>
+                        </div>
+                        <div class="skill-bar-container">
+                            <div class="skill-bar" style="width: 65%">
+                                <span class="skill-percentage">65%</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-header">
+                            <span class="skill-name">Git</span>
+                        </div>
+                        <div class="skill-bar-container">
+                            <div class="skill-bar" style="width: 80%">
+                                <span class="skill-percentage">80%</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Technical Skills -->
+                <div class="skill-category">
+                    <h3 class="category-title">Technical Skills</h3>
+                    <div class="skill-item">
+                        <div class="skill-header">
+                            <span class="skill-name">Gameplay Systems</span>
+                        </div>
+                        <div class="skill-bar-container">
+                            <div class="skill-bar" style="width: 65%">
+                                <span class="skill-percentage">65%</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-header">
+                            <span class="skill-name">UI/UX</span>
+                        </div>
+                        <div class="skill-bar-container">
+                            <div class="skill-bar" style="width: 60%">
+                                <span class="skill-percentage">60%</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-header">
+                            <span class="skill-name">Physics</span>
+                        </div>
+                        <div class="skill-bar-container">
+                            <div class="skill-bar" style="width: 65%">
+                                <span class="skill-percentage">65%</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Core Competencies -->
+                <div class="skill-category">
+                    <h3 class="category-title">Core Competencies</h3>
+                    <div class="skill-item">
+                        <div class="skill-header">
+                            <span class="skill-name">Problem Solving</span>
+                        </div>
+                        <div class="skill-bar-container">
+                            <div class="skill-bar" style="width: 85%">
+                                <span class="skill-percentage">85%</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-header">
+                            <span class="skill-name">Team Collaboration</span>
+                        </div>
+                        <div class="skill-bar-container">
+                            <div class="skill-bar" style="width: 75%">
+                                <span class="skill-percentage">75%</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-header">
+                            <span class="skill-name">Adaptability</span>
+                        </div>
+                        <div class="skill-bar-container">
+                            <div class="skill-bar" style="width: 88%">
+                                <span class="skill-percentage">88%</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
@@ -534,7 +309,21 @@
             document.getElementById(sectionId).classList.add('active');
         }
 
-        // Show project details
+        // Toggle info sections
+        function toggleInfo(type) {
+            const educationInfo = document.getElementById('education-info');
+            const careerInfo = document.getElementById('career-info');
+            
+            if (type === 'education') {
+                educationInfo.style.display = educationInfo.style.display === 'block' ? 'none' : 'block';
+                careerInfo.style.display = 'none';
+            } else {
+                careerInfo.style.display = careerInfo.style.display === 'block' ? 'none' : 'block';
+                educationInfo.style.display = 'none';
+            }
+        }
+
+        // Project details functions
         function showProjectDetails(projectId) {
             const projectsGrid = document.querySelector('.projects-grid');
             const projectDetails = document.getElementById(projectId + '-details');
@@ -543,7 +332,6 @@
             projectDetails.classList.add('active');
         }
 
-        // Hide project details
         function hideProjectDetails(projectId) {
             const projectsGrid = document.querySelector('.projects-grid');
             const projectDetails = document.getElementById(projectId + '-details');
