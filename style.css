@@ -28,8 +28,7 @@ body {
 header {
     background-color: var(--primary-color);
     color: var(--header-text);
-    padding: 10rem 21rem;
-    display: flex;
+    padding: 10rem 12rem 2rem 16rem;    display: flex;
     align-items: center;
     gap: 4rem;
 }
@@ -192,9 +191,20 @@ html, body {
 }
 
 .about-text {
+    font-size: 1.2rem;
     max-width: 800px;
     margin: 0 auto 1.5rem;
     text-align: center;
+}
+
+.keyword {
+    font-weight: 700;
+    color: var(--accent-color);
+}
+
+.keyword-alt {
+    font-weight: 700;
+    color: var(--accent-color);
 }
 
 /* Project Styles */
@@ -337,8 +347,10 @@ html, body {
 
 .education-description, 
 .career-description {
+    font-size: 1.2rem;
     margin-bottom: 1.5rem;
     line-height: 1.8;
+    text-align: center;
 }
 
 .education-highlights {
@@ -347,6 +359,7 @@ html, body {
 }
 
 .education-highlights li {
+    font-size: 1.2rem;
     margin-bottom: 1rem;
     padding-left: 1.5rem;
     position: relative;
