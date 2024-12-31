@@ -1,12 +1,12 @@
 /* Root Variables */
 :root {
     --primary-color: #1a1a1a;
+    --secondary-color: #1f3a58;
     --accent-color: #8FDFDE;
-    --accent-color2: #c4113e;
-    --text-color: #2d3436;
-    --background-color: #ffffff;
-    --section-bg: #f5f6fa;
-    --header-text: #ffffff;
+    --text-color: #ffffff;
+    --text-muted: #a0a0a0;
+    --card-bg: #242424;
+    --border-color: #333333;
 }
 
 /* Base Styles */
@@ -128,6 +128,8 @@ section {
     padding: 4rem 2rem;
     display: none;
     animation: fadeIn 0.5s ease-in;
+    background-color: var(--primary-color);
+    color: var(--text-color);
 }
 
 section.active {
@@ -165,10 +167,11 @@ section.active {
 }
 
 .project-card {
-    background: white;
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
     border-radius: 8px;
     overflow: hidden;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease;
     cursor: pointer;
     display: flex;
@@ -193,15 +196,18 @@ section.active {
 }
 
 .project-details {
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
     display: none;
     padding: 2rem;
-    background: white;
     border-radius: 8px;
     margin-top: 2rem;
     animation: fadeIn 0.5s ease-in;
 }
 
+
 .project-details.active {
+    background: var(--card-bg);
     display: block;
 }
 
@@ -230,7 +236,7 @@ section.active {
 
 .info-button {
     background: var(--accent-color);
-    color: white;
+    color: var(--primary-color);
     padding: 0.8rem 2rem;
     border: none;
     border-radius: 4px;
@@ -242,9 +248,14 @@ section.active {
 
 .info-button:hover {
     transform: translateY(-2px);
+    opacity: 0.9;
 }
 
 .info-section {
+    background-color: var(--card-bg);
+    border: 1px solid var(--border-color);
+    padding: 2rem;
+    border-radius: 8px;
     display: none;
     animation: fadeIn 0.5s ease-in;
     max-width: 800px;
@@ -274,7 +285,7 @@ section.active {
     font-weight: bold;
     margin-bottom: 0.5rem;
     text-align: center;
-    color: var(--primary-color);
+    color: var(--text-color);
 }
 
 .degree-name, 
@@ -317,7 +328,8 @@ section.active {
 }
 
 .skill-category {
-    background: white;
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
     border-radius: 8px;
     padding: 20px;
     margin-bottom: 30px;
@@ -325,7 +337,7 @@ section.active {
 }
 
 .category-title {
-    color: var(--primary-color);
+    color: var(--text-color);
     font-size: 1.5rem;
     margin-bottom: 20px;
     padding-bottom: 10px;
@@ -349,7 +361,7 @@ section.active {
 .skill-bar-container {
     width: 100%;
     height: 20px;
-    background-color: #e9ecef;
+    background-color: var(--secondary-color);
     border-radius: 10px;
     overflow: hidden;
 }
@@ -365,7 +377,7 @@ section.active {
 .skill-percentage {
     position: absolute;
     right: 10px;
-    color: white;
+    color: var(--text-color);
     font-size: 0.8rem;
     line-height: 20px;
 }
@@ -378,6 +390,18 @@ section.active {
     margin: 2rem auto;
 }
 
+.contact-form input,
+.contact-form textarea {
+    background-color: var(--card-bg);
+    border: 1px solid var(--border-color);
+    color: var(--text-color);
+}
+
+.contact-form input::placeholder,
+.contact-form textarea::placeholder {
+    color: var(--text-muted);
+}
+
 input, 
 textarea {
     padding: 0.8rem;
@@ -387,7 +411,7 @@ textarea {
 
 button {
     background: var(--accent-color);
-    color: white;
+    color: var(--primary-color);
     padding: 0.8rem 1.5rem;
     border: none;
     border-radius: 4px;
@@ -402,7 +426,7 @@ button:hover {
 /* Footer Styles */
 footer {
     background: var(--primary-color);
-    color: white;
+    color: var(--primary-color);
     text-align: center;
     padding: 2rem;
     margin-top: 2rem;
