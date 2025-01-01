@@ -486,7 +486,7 @@ footer {
 }
 
 /* Responsive Styles */
-@media (max-width: 768px) {
+@media (max-width: 768px) and (orientation: portrait) {
     nav {
         flex-direction: column;
         gap: 0.5rem;
@@ -584,6 +584,119 @@ footer {
     }
 }
 
+@media (max-width: 768px) and (orientation: landscape) {
+    /* Navigation - horizontal layout */
+    nav {
+        flex-direction: row;
+        padding: 0.8rem 1.5rem;
+        align-items: center;
+    }
+
+    .nav-brand {
+        text-align: left;
+    }
+
+    .nav-brand h1 {
+        font-size: 1rem;
+        margin-bottom: 0.2rem;
+    }
+
+    .nav-brand p {
+        font-size: 0.5rem;
+        margin-top: 0;
+    }
+
+    .nav-center {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        width: auto;
+        gap: 0.8rem;
+        margin: 0;
+    }
+
+    .nav-center a {
+        font-size: 0.7rem;
+    }
+
+    .nav-right {
+        gap: 1rem;
+        font-size: .8rem;
+    }
+
+    /* Header - side-by-side layout */
+    header {
+        padding: 5rem 2rem 3rem 2rem;
+    }
+
+    .header-content {
+        flex-direction: row;
+        text-align: left;
+        gap: 2rem;
+        align-items: center;
+    }
+
+    .profile-container {
+        width: 150px;
+        height: 150px;
+        margin: 0;
+    }
+
+    .header-summary p {
+        font-size: 1rem;
+        line-height: 1.4;
+    }
+
+    /* Projects Grid */
+    .projects-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+    }
+
+    .project-card {
+        flex-direction: row;
+        height: 120px;
+    }
+
+    .project-thumbnail {
+        width: 40%;
+        height: 100%;
+    }
+
+    .project-preview {
+        width: 60%;
+    }
+
+    /* Adjust sections for landscape */
+    section {
+        padding: 2rem 1.5rem;
+    }
+
+    .about-text {
+        font-size: 1rem;
+        line-height: 1.5;
+    }
+
+    /* Make other content fit landscape better */
+    .skill-category {
+        padding: 1rem;
+        margin-bottom: 1rem;
+    }
+
+    .category-title {
+        font-size: 1.1rem;
+    }
+
+    .info-buttons {
+        gap: 1rem;
+    }
+
+    .info-button {
+        padding: 0.6rem 1rem;
+        font-size: 0.8rem;
+    }
+}
+
 @media (min-width: 769px) and (max-width: 1024px) {
     /* Navigation - maintain horizontal layout */
     nav {
@@ -597,12 +710,12 @@ footer {
     }
 
     .nav-brand h1 {
-        font-size: 1.4rem;
+        font-size: 1.2rem;
         margin-bottom: 0.2rem;
     }
 
     .nav-brand p {
-        font-size: .85rem;
+        font-size: .7rem;
     }
 
     .nav-center {
@@ -610,7 +723,7 @@ footer {
         left: 50%;
         transform: translateX(-50%);
         width: auto;
-        gap: 1rem;
+        gap: .8rem;
     }
 
     .nav-center a {
