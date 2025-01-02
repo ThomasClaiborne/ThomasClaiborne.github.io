@@ -288,7 +288,7 @@ html, body {
 
 .project-title {
     font-size: 1.5rem;
-    color: var(--accent-color2);
+    color: var(--accent-color3);
     margin-bottom: 0.5rem;
 }
 
@@ -308,6 +308,85 @@ html, body {
 .project-details.active {
     background: var(--card-bg);
     display: block;
+}
+
+.project-details-view {
+    display: none;
+    padding: 2rem;
+    background-color: var(--primary-color);
+    min-height: 100vh;
+}
+
+.project-details-view.active {
+    display: block;
+}
+
+.back-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: var(--accent-color);
+    text-decoration: none;
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    cursor: pointer;
+}
+
+.back-button:hover {
+    color: var(--accent-color);
+}
+
+.project-demo {
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto 2rem;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.project-demo video {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.project-info-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.info-box {
+    background: var(--card-bg);
+    padding: 2rem;
+    border-radius: 8px;
+    border: 1px solid var(--border-color);
+}
+
+.info-box h3 {
+    color: var(--accent-color2);
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+}
+
+.project-metadata {
+    display: grid;
+    gap: 1rem;
+}
+
+.metadata-item {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    color: var(--text-color);
+}
+
+.metadata-item svg {
+    width: 1.5rem;
+    height: 1.5rem;
+    color: var(--accent-color);
 }
 
 .project-gallery {
@@ -646,6 +725,23 @@ footer {
 
     .project-preview {
         width: 100%;
+    }
+
+    .project-info-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .project-demo {
+        margin-bottom: 1.5rem;
+    }
+    
+    .info-box {
+        padding: 1.5rem;
+    }
+
+    .back-button {
+        font-size: 1rem;
+        margin-bottom: 1.5rem;
     }
 }
 
