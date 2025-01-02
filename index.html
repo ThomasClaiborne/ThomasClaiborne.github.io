@@ -1,383 +1,696 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Thomas Claiborne | Game Developer Portfolio</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
     <nav>
-        <div class="nav-brand">
-            <h1>Thomas Claiborne</h1>
-            <p>Gameplay Programmer</p>
-        </div>
-        
-        <div class="nav-center">
-            <a onclick="showSection('about')">About</a>
-            <a onclick="showSection('projects')">Projects</a>
-            <a onclick="showSection('skills')">Skills</a>
-            <a onclick="showSection('contact')">Contact</a>
-        </div>
-        
-        <div class="nav-right">
-            <a href="https://www.linkedin.com/in/trc3/" class="social-link" target="_blank">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
-            </a>
-            <a href="https://github.com/" class="social-link" target="_blank">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
-            </a>
-            <a href="/resume.pdf" class="social-link" target="_blank">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
-            </a>
-        </div>
+      <div class="nav-brand">
+        <h1>Thomas Claiborne</h1>
+        <p>Gameplay Programmer</p>
+      </div>
+
+      <div class="nav-center">
+        <a onclick="showSection('about')">About</a>
+        <a onclick="showSection('projects')">Projects</a>
+        <a onclick="showSection('skills')">Skills</a>
+        <a onclick="showSection('contact')">Contact</a>
+      </div>
+
+      <div class="nav-right">
+        <a
+          href="https://www.linkedin.com/in/trc3/"
+          class="social-link"
+          target="_blank"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <path
+              d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"
+            ></path>
+            <rect x="2" y="9" width="4" height="12"></rect>
+            <circle cx="4" cy="4" r="2"></circle>
+          </svg>
+        </a>
+        <a href="https://github.com/" class="social-link" target="_blank">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <path
+              d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"
+            ></path>
+          </svg>
+        </a>
+        <a href="/resume.pdf" class="social-link" target="_blank">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <path
+              d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"
+            ></path>
+            <polyline points="14 2 14 8 20 8"></polyline>
+            <line x1="16" y1="13" x2="8" y2="13"></line>
+            <line x1="16" y1="17" x2="8" y2="17"></line>
+            <polyline points="10 9 9 9 8 9"></polyline>
+          </svg>
+        </a>
+      </div>
     </nav>
 
     <header>
-        <div class="header-content">
-            <div class="profile-container">
-                <img src="images/ProfileImage.png" alt="Thomas Claiborne" class="profile-image">
-            </div>
-            <div class="header-summary">
-                <p>"Game developer and programmer passionate about bringing fun to life through gameplay, crafting efficient code that transforms ideas into unforgettable gaming experiences."</p>
-            </div>
+      <div class="header-content">
+        <div class="profile-container">
+          <img
+            src="images/ProfileImage.png"
+            alt="Thomas Claiborne"
+            class="profile-image"
+          />
         </div>
+        <div class="header-summary">
+          <p>
+            "Game developer and programmer passionate about bringing fun to life
+            through gameplay, crafting efficient code that transforms ideas into
+            unforgettable gaming experiences."
+          </p>
+        </div>
+      </div>
     </header>
 
     <section id="about" class="active">
-        <div class="container">
-            <h2 class="text-center">About Me</h2>
-            <p class="about-text">
-                As a 24-year-old <span class="keyword">gameplay programmer</span>, I've transformed my childhood passion for dreaming up game ideas into a mission of bringing fun to life through code. My expertise in <span class="keyword">C++</span> and drive for <span class="keyword-alt">problem-solving</span> enable me to craft engaging player experiences through intuitive mechanics. From implementing <span class="keyword">physics-based interactions</span> to designing <span class="keyword-alt">AI behaviors</span>, I thrive on technical challenges that push gameplay boundaries.
-            </p>
-            
-            <p class="about-text">
-                My foundation combines <span class="keyword">systems programming</span> with a deep understanding of <span class="keyword-alt">player engagement</span>. I specialize in developing <span class="keyword">efficient solutions</span> that balance performance with smooth, responsive gameplay mechanics, turning creative ideas into memorable gaming moments.
-            </p>
+      <div class="container">
+        <h2 class="text-center">About Me</h2>
+        <p class="about-text">
+          As a 24-year-old <span class="keyword">gameplay programmer</span>,
+          I've transformed my childhood passion for dreaming up game ideas into
+          a mission of bringing fun to life through code. My expertise in
+          <span class="keyword">C++</span> and drive for
+          <span class="keyword-alt">problem-solving</span> enable me to craft
+          engaging player experiences through intuitive mechanics. From
+          implementing
+          <span class="keyword">physics-based interactions</span> to designing
+          <span class="keyword-alt">AI behaviors</span>, I thrive on technical
+          challenges that push gameplay boundaries.
+        </p>
 
-            <div class="info-buttons">
-                <button onclick="toggleInfo('education')" class="info-button">Education</button>
-                <button onclick="toggleInfo('career')" class="info-button">Career</button>
-            </div>
+        <p class="about-text">
+          My foundation combines
+          <span class="keyword">systems programming</span> with a deep
+          understanding of <span class="keyword-alt">player engagement</span>. I
+          specialize in developing
+          <span class="keyword">efficient solutions</span> that balance
+          performance with smooth, responsive gameplay mechanics, turning
+          creative ideas into memorable gaming moments.
+        </p>
 
-            <div id="education-info" class="info-section">
-                <div class="info-image-container">
-                    <img src="images/fullsail.jpg" alt="Full Sail University" class="info-image">
-                </div>
-                <div class="info-content">
-                    <h3 class="institution-name">Full Sail University</h3>
-                    <h4 class="degree-name">Bachelor's Degree in Game Development</h4>
-                    <p class="education-description">
-                        In this comprehensive degree program, I've gained extensive experience in game development fundamentals and advanced concepts. My education has encompassed:
-                    </p>
-                    <ul class="education-highlights">
-                        <li>Mastering C++ programming for game development, including projects with Unity, Unreal Engine, and direct implementation using Vulkan 3D API</li>
-                        <li>Creating 3D renders with Vulkan, developing AI systems, and implementing computer networks</li>
-                        <li>Building a server-client console application using Winsock for networking fundamentals</li>
-                        <li>Collaborating in Agile development environments, participating in sprint planning, daily standups, and utilizing Git for version control</li>
-                    </ul>
-                </div>
-            </div>
-
-            <div id="career-info" class="info-section">
-                <div class="info-image-container">
-                    <img src="images/thenetvr.png" alt="TheNetVR" class="info-image">
-                </div>
-                <div class="info-content">
-                    <h3 class="company-name">TheNetVR</h3>
-                    <h4 class="position-title">Unity Developer Intern</h4>
-                    <p class="career-description">
-                        Working within Unity in collaborative team environments to handle various aspects of our projects. Contributing to development sprints and participating in regular team communications to ensure project success.
-                    </p>
-                </div>
-            </div>
+        <div class="info-buttons">
+          <button onclick="toggleInfo('education')" class="info-button">
+            Education
+          </button>
+          <button onclick="toggleInfo('career')" class="info-button">
+            Career
+          </button>
         </div>
+
+        <div id="education-info" class="info-section">
+          <div class="info-image-container">
+            <img
+              src="images/fullsail.jpg"
+              alt="Full Sail University"
+              class="info-image"
+            />
+          </div>
+          <div class="info-content">
+            <h3 class="institution-name">Full Sail University</h3>
+            <h4 class="degree-name">Bachelor's Degree in Game Development</h4>
+            <p class="education-description">
+              In this comprehensive degree program, I've gained extensive
+              experience in game development fundamentals and advanced concepts.
+              My education has encompassed:
+            </p>
+            <ul class="education-highlights">
+              <li>
+                Mastering C++ programming for game development, including
+                projects with Unity, Unreal Engine, and direct implementation
+                using Vulkan 3D API
+              </li>
+              <li>
+                Creating 3D renders with Vulkan, developing AI systems, and
+                implementing computer networks
+              </li>
+              <li>
+                Building a server-client console application using Winsock for
+                networking fundamentals
+              </li>
+              <li>
+                Collaborating in Agile development environments, participating
+                in sprint planning, daily standups, and utilizing Git for
+                version control
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div id="career-info" class="info-section">
+          <div class="info-image-container">
+            <img src="images/thenetvr.png" alt="TheNetVR" class="info-image" />
+          </div>
+          <div class="info-content">
+            <h3 class="company-name">TheNetVR</h3>
+            <h4 class="position-title">Unity Developer Intern</h4>
+            <p class="career-description">
+              Working within Unity in collaborative team environments to handle
+              various aspects of our projects. Contributing to development
+              sprints and participating in regular team communications to ensure
+              project success.
+            </p>
+          </div>
+        </div>
+      </div>
     </section>
 
     <section id="projects">
-        <div class="container">
-            <h2>Game Programming</h2>
-            <div class="projects-grid">
-                <article class="project-card" onclick="showProjectDetails('project1')">
-                    <img src="/api/placeholder/200/150" alt="Project 1" class="project-thumbnail">
-                    <div class="project-preview">
-                        <h3>Project Alpha</h3>
-                    </div>
-                </article>
-                <article class="project-card" onclick="showProjectDetails('project2')">
-                    <img src="/api/placeholder/200/150" alt="Project 2" class="project-thumbnail">
-                    <div class="project-preview">
-                        <h3>Project Beta</h3>
-                    </div>
-                </article>
-                <article class="project-card" onclick="showProjectDetails('project3')">
-                    <img src="/api/placeholder/200/150" alt="Project 3" class="project-thumbnail">
-                    <div class="project-preview">
-                        <h3>Project Gamma</h3>
-                    </div>
-                </article>
-                <article class="project-card" onclick="showProjectDetails('project4')">
-                    <img src="/api/placeholder/200/150" alt="Project 4" class="project-thumbnail">
-                    <div class="project-preview">
-                        <h3>Project Delta</h3>
-                    </div>
-                </article>
-            </div>
-
-            <!-- Project Details Sections -->
-            <div id="project1-details" class="project-details">
-                <button class="back-button" onclick="hideProjectDetails('project1')">Back to Projects</button>
-                <h2>Project Alpha</h2>
-                <p>Detailed description of Project Alpha, including the concept, development process, and key features.</p>
-                <div class="project-gallery">
-                    <img src="/api/placeholder/300/200" alt="Screenshot 1" class="gallery-item">
-                    <img src="/api/placeholder/300/200" alt="Screenshot 2" class="gallery-item">
-                    <img src="/api/placeholder/300/200" alt="Screenshot 3" class="gallery-item">
+      <div class="container">
+        <h2>Game Programming</h2>
+        <div class="projects-grid">
+          <!-- Project Card 1 -->
+          <article
+            class="project-card"
+            onclick="showProjectDetails('project1')"
+          >
+            <div class="project-media">
+              <video autoplay loop muted playsinline>
+                <source src="videos/JumpingJackPortfolioVideo.mp4" type="video/mp4" />
+              </video>
+              <div class="project-info-overlay">
+                <div class="info-item">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  >
+                    <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                    <circle cx="9" cy="7" r="4"></circle>
+                    <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                    <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                  </svg>
+                  <span>4</span>
                 </div>
-                <h3>What I Learned</h3>
-                <p>Key takeaways and skills developed during this project.</p>
-                <div class="skills-list">
-                    <span class="skill-tag">C++</span>
-                    <span class="skill-tag">Game Design</span>
-                    <span class="skill-tag">Level Design</span>
+                <div class="info-item">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  >
+                    <circle cx="12" cy="12" r="10"></circle>
+                    <polyline points="12 6 12 12 16 14"></polyline>
+                  </svg>
+                  <span>4 Weeks</span>
                 </div>
+                <div class="info-item">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  >
+                    <path
+                      d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"
+                    ></path>
+                    <polyline points="15 3 21 3 21 9"></polyline>
+                    <line x1="10" y1="14" x2="21" y2="3"></line>
+                  </svg>
+                  <span>Vulkan/EnTT (C++)</span>
+                </div>
+              </div>
             </div>
+            <div class="project-details">
+              <h3 class="project-title">Jumping Jack (2024)</h3>
+              <h4 class="project-role">Gameplay Programmer</h4>
+              <p class="project-description">
+                A school project developed with my team 'Orange Outlaws', built with custom rendering using Vulkan 3D API and EnTT for entity management. 
+                Project focused on implementing pixel-perfect collision detection and responsive controls.
+              </p>
+            </div>
+          </article>
 
-            <!-- Other project details sections -->
-            <div id="project2-details" class="project-details">
-                <!-- Similar structure to project1-details -->
+          <!-- Project Card 2 -->
+          <article
+            class="project-card"
+            onclick="showProjectDetails('project2')"
+          >
+            <div class="project-media">
+              <video autoplay loop muted playsinline>
+                <source src="videos/EraCodePortfolioVideo.mp4" type="video/mp4" />
+              </video>
+              <div class="project-info-overlay">
+                <div class="info-item">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  >
+                    <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                    <circle cx="9" cy="7" r="4"></circle>
+                    <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                    <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                  </svg>
+                  <span>1</span>
+                </div>
+                <div class="info-item">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  >
+                    <circle cx="12" cy="12" r="10"></circle>
+                    <polyline points="12 6 12 12 16 14"></polyline>
+                  </svg>
+                  <span>4 Weeks</span>
+                </div>
+                <div class="info-item">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  >
+                    <path
+                      d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"
+                    ></path>
+                    <polyline points="15 3 21 3 21 9"></polyline>
+                    <line x1="10" y1="14" x2="21" y2="3"></line>
+                  </svg>
+                  <span>Unity (C#)</span>
+                </div>
+              </div>
             </div>
-            <div id="project3-details" class="project-details">
-                <!-- Similar structure to project1-details -->
+            <div class="project-details">
+              <h3 class="project-title">Era Code (2024)</h3>
+              <h4 class="project-role">Gameplay Programmer</h4>
+              <p class="project-description">
+                A top-down defense shooter created during my first game jam 'Devtober'. 
+                Players hold their ground against waves of diverse robot enemies in intense fixed-position combat.
+              </p>
             </div>
-            <div id="project4-details" class="project-details">
-                <!-- Similar structure to project1-details -->
+          </article>
+
+          <!-- Project Card 3 -->
+          <article
+            class="project-card"
+            onclick="showProjectDetails('project3')"
+          >
+            <div class="project-media">
+              <video autoplay loop muted playsinline>
+                <source src="videos/ProjectElysiumPortfolioDemo.mp4" type="video/mp4" />
+              </video>
+              <div class="project-info-overlay">
+                <div class="info-item">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  >
+                    <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                    <circle cx="9" cy="7" r="4"></circle>
+                    <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                    <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                  </svg>
+                  <span>3</span>
+                </div>
+                <div class="info-item">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  >
+                    <circle cx="12" cy="12" r="10"></circle>
+                    <polyline points="12 6 12 12 16 14"></polyline>
+                  </svg>
+                  <span>4 Weeks</span>
+                </div>
+                <div class="info-item">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  >
+                    <path
+                      d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"
+                    ></path>
+                    <polyline points="15 3 21 3 21 9"></polyline>
+                    <line x1="10" y1="14" x2="21" y2="3"></line>
+                  </svg>
+                  <span>Unity (C#)</span>
+                </div>
+              </div>
             </div>
+            <div class="project-details">
+              <h3 class="project-title">Project Elysium (2024)</h3>
+              <h4 class="project-role">Gameplay Programmer</h4>
+              <p class="project-description">
+                A third-person shooter developed with team Vaxis as a school project. 
+                Take control of a feisty grandma who unleashes her surprising arsenal against hordes of zombies threatening her turf.
+              </p>
+            </div>
+          </article>
+
+          <!-- Project Card 4 -->
+          <article
+            class="project-card"
+            onclick="showProjectDetails('project4')"
+          >
+            <div class="project-media">
+              <video autoplay loop muted playsinline>
+                <source src="videos/FindEmAllPortfolioVideo.mp4" type="video/mp4" />
+              </video>
+              <div class="project-info-overlay">
+                <div class="info-item">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  >
+                    <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                    <circle cx="9" cy="7" r="4"></circle>
+                    <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                    <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                  </svg>
+                  <span>3</span>
+                </div>
+                <div class="info-item">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  >
+                    <circle cx="12" cy="12" r="10"></circle>
+                    <polyline points="12 6 12 12 16 14"></polyline>
+                  </svg>
+                  <span>4 Weeks</span>
+                </div>
+                <div class="info-item">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  >
+                    <path
+                      d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"
+                    ></path>
+                    <polyline points="15 3 21 3 21 9"></polyline>
+                    <line x1="10" y1="14" x2="21" y2="3"></line>
+                  </svg>
+                  <span>Unity (C#)</span>
+                </div>
+              </div>
+            </div>
+            <div class="project-details">
+              <h3 class="project-title">Floor Zero (2024)</h3>
+              <h4 class="project-role">Gameplay Programmer</h4>
+              <p class="project-description">
+                A first-person shooter developed with team Vaxis as one of our first Unity projects in school. 
+                Players clear enemies floor-by-floor, finding keys to unlock elevator access for vertical progression.
+              </p>
+            </div>
+          </article>
         </div>
+      </div>
     </section>
 
     <section id="skills">
-        <div class="container">
-            <h2>Skills & Expertise</h2>
-            <div class="skills-container">
-                <!-- Programming Languages -->
-                <div class="skill-category">
-                    <h3 class="category-title">Programming Languages</h3>
-                    <div class="skill-item">
-                        <div class="skill-header">
-                            <span class="skill-name">C++</span>
-                        </div>
-                        <div class="skill-bar-container">
-                            <div class="skill-bar" style="width: 78%">
-                                <span class="skill-percentage">78</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="skill-item">
-                        <div class="skill-header">
-                            <span class="skill-name">C#</span>
-                        </div>
-                        <div class="skill-bar-container">
-                            <div class="skill-bar" style="width: 75%">
-                                <span class="skill-percentage">75</span>
-                            </div>
-                        </div>
-                    </div>
+      <div class="container">
+        <h2>Skills & Expertise</h2>
+        <div class="skills-container">
+          <!-- Programming Languages -->
+          <div class="skill-category">
+            <h3 class="category-title">Programming Languages</h3>
+            <div class="skill-item">
+              <div class="skill-header">
+                <span class="skill-name">C++</span>
+              </div>
+              <div class="skill-bar-container">
+                <div class="skill-bar" style="width: 78%">
+                  <span class="skill-percentage">78</span>
                 </div>
-
-                <!-- Game Engines -->
-                <div class="skill-category">
-                    <h3 class="category-title">Game Engines</h3>
-                    <div class="skill-item">
-                        <div class="skill-header">
-                            <span class="skill-name">Unity</span>
-                        </div>
-                        <div class="skill-bar-container">
-                            <div class="skill-bar" style="width: 60%">
-                                <span class="skill-percentage">60</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="skill-item">
-                        <div class="skill-header">
-                            <span class="skill-name">Unreal Engine</span>
-                        </div>
-                        <div class="skill-bar-container">
-                            <div class="skill-bar" style="width: 20%">
-                                <span class="skill-percentage">20</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Development Practices -->
-                <div class="skill-category">
-                    <h3 class="category-title">Development Practices</h3>
-                    <div class="skill-item">
-                        <div class="skill-header">
-                            <span class="skill-name">Agile Scrum</span>
-                        </div>
-                        <div class="skill-bar-container">
-                            <div class="skill-bar" style="width: 65%">
-                                <span class="skill-percentage">65</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="skill-item">
-                        <div class="skill-header">
-                            <span class="skill-name">Git</span>
-                        </div>
-                        <div class="skill-bar-container">
-                            <div class="skill-bar" style="width: 80%">
-                                <span class="skill-percentage">80</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Technical Skills -->
-                <div class="skill-category">
-                    <h3 class="category-title">Technical Skills</h3>
-                    <div class="skill-item">
-                        <div class="skill-header">
-                            <span class="skill-name">Gameplay Systems</span>
-                        </div>
-                        <div class="skill-bar-container">
-                            <div class="skill-bar" style="width: 65%">
-                                <span class="skill-percentage">65</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="skill-item">
-                        <div class="skill-header">
-                            <span class="skill-name">UI/UX</span>
-                        </div>
-                        <div class="skill-bar-container">
-                            <div class="skill-bar" style="width: 60%">
-                                <span class="skill-percentage">60</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="skill-item">
-                        <div class="skill-header">
-                            <span class="skill-name">Physics</span>
-                        </div>
-                        <div class="skill-bar-container">
-                            <div class="skill-bar" style="width: 65%">
-                                <span class="skill-percentage">65</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Core Competencies -->
-                <div class="skill-category">
-                    <h3 class="category-title">Core Competencies</h3>
-                    <div class="skill-item">
-                        <div class="skill-header">
-                            <span class="skill-name">Problem Solving</span>
-                        </div>
-                        <div class="skill-bar-container">
-                            <div class="skill-bar" style="width: 85%">
-                                <span class="skill-percentage">85</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="skill-item">
-                        <div class="skill-header">
-                            <span class="skill-name">Team Collaboration</span>
-                        </div>
-                        <div class="skill-bar-container">
-                            <div class="skill-bar" style="width: 75%">
-                                <span class="skill-percentage">75</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="skill-item">
-                        <div class="skill-header">
-                            <span class="skill-name">Adaptability</span>
-                        </div>
-                        <div class="skill-bar-container">
-                            <div class="skill-bar" style="width: 88%">
-                                <span class="skill-percentage">88</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="skill-item">
-                        <div class="skill-header">
-                            <span class="skill-name">Game Passion</span>
-                        </div>
-                        <div class="skill-bar-container">
-                            <div class="skill-bar" style="width: 100%">
-                                <span class="skill-percentage">100</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+              </div>
             </div>
+            <div class="skill-item">
+              <div class="skill-header">
+                <span class="skill-name">C#</span>
+              </div>
+              <div class="skill-bar-container">
+                <div class="skill-bar" style="width: 75%">
+                  <span class="skill-percentage">75</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Game Engines -->
+          <div class="skill-category">
+            <h3 class="category-title">Game Engines</h3>
+            <div class="skill-item">
+              <div class="skill-header">
+                <span class="skill-name">Unity</span>
+              </div>
+              <div class="skill-bar-container">
+                <div class="skill-bar" style="width: 60%">
+                  <span class="skill-percentage">60</span>
+                </div>
+              </div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-header">
+                <span class="skill-name">Unreal Engine</span>
+              </div>
+              <div class="skill-bar-container">
+                <div class="skill-bar" style="width: 20%">
+                  <span class="skill-percentage">20</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Development Practices -->
+          <div class="skill-category">
+            <h3 class="category-title">Development Practices</h3>
+            <div class="skill-item">
+              <div class="skill-header">
+                <span class="skill-name">Agile Scrum</span>
+              </div>
+              <div class="skill-bar-container">
+                <div class="skill-bar" style="width: 65%">
+                  <span class="skill-percentage">65</span>
+                </div>
+              </div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-header">
+                <span class="skill-name">Git</span>
+              </div>
+              <div class="skill-bar-container">
+                <div class="skill-bar" style="width: 80%">
+                  <span class="skill-percentage">80</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Technical Skills -->
+          <div class="skill-category">
+            <h3 class="category-title">Technical Skills</h3>
+            <div class="skill-item">
+              <div class="skill-header">
+                <span class="skill-name">Gameplay Systems</span>
+              </div>
+              <div class="skill-bar-container">
+                <div class="skill-bar" style="width: 65%">
+                  <span class="skill-percentage">65</span>
+                </div>
+              </div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-header">
+                <span class="skill-name">UI/UX</span>
+              </div>
+              <div class="skill-bar-container">
+                <div class="skill-bar" style="width: 60%">
+                  <span class="skill-percentage">60</span>
+                </div>
+              </div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-header">
+                <span class="skill-name">Physics</span>
+              </div>
+              <div class="skill-bar-container">
+                <div class="skill-bar" style="width: 65%">
+                  <span class="skill-percentage">65</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Core Competencies -->
+          <div class="skill-category">
+            <h3 class="category-title">Core Competencies</h3>
+            <div class="skill-item">
+              <div class="skill-header">
+                <span class="skill-name">Problem Solving</span>
+              </div>
+              <div class="skill-bar-container">
+                <div class="skill-bar" style="width: 85%">
+                  <span class="skill-percentage">85</span>
+                </div>
+              </div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-header">
+                <span class="skill-name">Team Collaboration</span>
+              </div>
+              <div class="skill-bar-container">
+                <div class="skill-bar" style="width: 75%">
+                  <span class="skill-percentage">75</span>
+                </div>
+              </div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-header">
+                <span class="skill-name">Adaptability</span>
+              </div>
+              <div class="skill-bar-container">
+                <div class="skill-bar" style="width: 88%">
+                  <span class="skill-percentage">88</span>
+                </div>
+              </div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-header">
+                <span class="skill-name">Game Passion</span>
+              </div>
+              <div class="skill-bar-container">
+                <div class="skill-bar" style="width: 100%">
+                  <span class="skill-percentage">100</span>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
+      </div>
     </section>
 
     <section id="contact">
-        <div class="container">
-            <h2>Contact Me</h2>
-            <form class="contact-form">
-                <input type="text" placeholder="Name" required>
-                <input type="email" placeholder="Email" required>
-                <textarea placeholder="Message" rows="5" required></textarea>
-                <button type="submit">Send Message</button>
-            </form>
-        </div>
+      <div class="container">
+        <h2>Contact Me</h2>
+        <form class="contact-form">
+          <input type="text" placeholder="Name" required />
+          <input type="email" placeholder="Email" required />
+          <textarea placeholder="Message" rows="5" required></textarea>
+          <button type="submit">Send Message</button>
+        </form>
+      </div>
     </section>
 
     <footer>
-        <p>&copy; 2024 Thomas Claiborne. All rights reserved.</p>
+      <p>&copy; 2024 Thomas Claiborne. All rights reserved.</p>
     </footer>
 
     <script>
-        // Show/hide sections
-        function showSection(sectionId) {
-            document.querySelectorAll('section').forEach(section => {
-                section.classList.remove('active');
-            });
-            document.getElementById(sectionId).classList.add('active');
-        }
-
-        // Toggle info sections
-        function toggleInfo(type) {
-            const educationInfo = document.getElementById('education-info');
-            const careerInfo = document.getElementById('career-info');
-            
-            if (type === 'education') {
-                educationInfo.style.display = educationInfo.style.display === 'block' ? 'none' : 'block';
-                careerInfo.style.display = 'none';
-            } else {
-                careerInfo.style.display = careerInfo.style.display === 'block' ? 'none' : 'block';
-                educationInfo.style.display = 'none';
-            }
-        }
-
-        // Project details functions
-        function showProjectDetails(projectId) {
-            const projectsGrid = document.querySelector('.projects-grid');
-            const projectDetails = document.getElementById(projectId + '-details');
-            
-            projectsGrid.style.display = 'none';
-            projectDetails.classList.add('active');
-        }
-
-        function hideProjectDetails(projectId) {
-            const projectsGrid = document.querySelector('.projects-grid');
-            const projectDetails = document.getElementById(projectId + '-details');
-            
-            projectDetails.classList.remove('active');
-            projectsGrid.style.display = 'grid';
-        }
-
-        // Set initial active section
-        document.addEventListener('DOMContentLoaded', () => {
-            showSection('about');
+      // Show/hide sections
+      function showSection(sectionId) {
+        document.querySelectorAll("section").forEach((section) => {
+          section.classList.remove("active");
         });
+        document.getElementById(sectionId).classList.add("active");
+      }
+
+      // Toggle info sections
+      function toggleInfo(type) {
+        const educationInfo = document.getElementById("education-info");
+        const careerInfo = document.getElementById("career-info");
+
+        if (type === "education") {
+          educationInfo.style.display =
+            educationInfo.style.display === "block" ? "none" : "block";
+          careerInfo.style.display = "none";
+        } else {
+          careerInfo.style.display =
+            careerInfo.style.display === "block" ? "none" : "block";
+          educationInfo.style.display = "none";
+        }
+      }
+
+      // Project details functions
+      function showProjectDetails(projectId) {
+        const projectsGrid = document.querySelector(".projects-grid");
+        const projectDetails = document.getElementById(projectId + "-details");
+
+        projectsGrid.style.display = "none";
+        projectDetails.classList.add("active");
+      }
+
+      function hideProjectDetails(projectId) {
+        const projectsGrid = document.querySelector(".projects-grid");
+        const projectDetails = document.getElementById(projectId + "-details");
+
+        projectDetails.classList.remove("active");
+        projectsGrid.style.display = "grid";
+      }
+
+      // Set initial active section
+      document.addEventListener("DOMContentLoaded", () => {
+        showSection("about");
+      });
     </script>
-</body>
+  </body>
 </html>
