@@ -1028,37 +1028,42 @@
     <script>
       // Show/hide sections
       function showSection(sectionId) {
-        // Hide project details if they're showing when switching sections
-        const projectDetails = document.querySelectorAll(
-          ".project-details-view"
-        );
-        projectDetails.forEach((detail) => {
-          detail.classList.remove("active");
-        });
-        const projectsGrid = document.querySelector(".projects-grid");
-        if (projectsGrid) {
-          projectsGrid.style.display = "grid";
-        }
+    // Hide project details if they're showing when switching sections
+    const projectDetails = document.querySelectorAll('.project-details-view');
+    projectDetails.forEach(detail => {
+        detail.classList.remove('active');
+    });
+    const projectsGrid = document.querySelector('.projects-grid');
+    if (projectsGrid) {
+        projectsGrid.style.display = 'grid';
+    }
 
-        // Show selected section
-        document.querySelectorAll("section").forEach((section) => {
-          section.classList.remove("active");
-        });
-        const selectedSection = document.getElementById(sectionId);
-        selectedSection.classList.add("active");
+    // Show selected section
+    document.querySelectorAll("section").forEach((section) => {
+        section.classList.remove("active");
+    });
+    const selectedSection = document.getElementById(sectionId);
+    selectedSection.classList.add("active");
 
-        // Scroll to the section's h2
-        const sectionHeading = selectedSection.querySelector("h2");
+    // Special handling for About section - scroll to top
+    if (sectionId === 'about' || sectionId === 'contact') {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        });
+    } else {
+        // For all other sections, scroll to their h2
+        const sectionHeading = selectedSection.querySelector('h2');
         if (sectionHeading) {
-          const navHeight = document.querySelector("nav").offsetHeight;
-          const headingPosition =
-            sectionHeading.getBoundingClientRect().top + window.scrollY;
-          window.scrollTo({
-            top: headingPosition - navHeight - 20, // 20px padding
-            behavior: "smooth",
-          });
+            const navHeight = document.querySelector('nav').offsetHeight;
+            const headingPosition = sectionHeading.getBoundingClientRect().top + window.scrollY;
+            window.scrollTo({
+                top: headingPosition - navHeight - 20, // 20px padding
+                behavior: 'smooth'
+            });
         }
-      }
+    }
+}
 
       // Toggle info sections
       function toggleInfo(type) {
@@ -1131,6 +1136,7 @@
       window.onbeforeunload = function () {
         window.scrollTo(0, 0);
       };
+      
     </script>
   </body>
 </html>
