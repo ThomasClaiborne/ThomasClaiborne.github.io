@@ -1046,7 +1046,7 @@
     selectedSection.classList.add("active");
 
     // Special handling for About section - scroll to top
-    if (sectionId === 'about' || sectionId === 'contact') {
+    if (sectionId === 'about' || (sectionId === 'contact' && window.innerWidth > 768)) {
         window.scrollTo({
             top: 0,
             behavior: 'smooth'
