@@ -265,7 +265,7 @@
             </div>
             <div class="project-details">
               <h3 class="project-title">Jumping Jack (2024)</h3>
-              <h4 class="project-role">Gameplay Programmer</h4>
+              <h4 class="project-role">Gameplay/Technical Programmer</h4>
               <p class="project-description">
                 A school project developed with my team 'Orange Outlaws', built
                 with custom rendering using Vulkan 3D API and EnTT for entity
@@ -489,93 +489,151 @@
         </div>
         <!-- Project 1 Details -->
         <div id="project1-details" class="project-details-view">
-          <div class="container">
-            <a class="back-button" onclick="hideProjectDetails('project1')">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="24"
-                height="24"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="2"
-              >
-                <path d="M19 12H5M12 19l-7-7 7-7" />
-              </svg>
-              Back
-            </a>
-
-            <div class="project-demo">
-              <video autoplay loop muted playsinline>
-                <source
-                  src="videos/JumpingJackPortfolioVideo.mp4"
-                  type="video/mp4"
-                />
-              </video>
-            </div>
-
-            <div class="project-info-grid">
-              <div class="info-box">
-                <h3>About</h3>
-                <p>
-                  A school project developed with my team 'Orange Outlaws',
-                  built with custom rendering using Vulkan 3D API and EnTT for
-                  entity management. Project focused on implementing
-                  pixel-perfect collision detection and responsive controls.
-                </p>
+            <div class="container">
+              <a class="back-button" onclick="hideProjectDetails('project1')">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M19 12H5M12 19l-7-7 7-7" />
+                </svg>
+                Back
+              </a>
+          
+              <div class="project-demo">
+                <video autoplay loop muted playsinline>
+                  <source src="videos/JumpingJackPortfolioVideo.mp4" type="video/mp4" />
+                </video>
+                <div class="project-title-bar">
+                  <h3>Jumping Jack</h3>
+                </div>
               </div>
-
-              <div class="info-box">
-                <h3>Project Info</h3>
-                <div class="project-metadata">
-                  <div class="metadata-item">
-                    <svg
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      stroke="currentColor"
-                      stroke-width="2"
-                    >
-                      <path
-                        d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"
-                      ></path>
-                      <circle cx="9" cy="7" r="4"></circle>
-                      <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
-                      <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
-                    </svg>
-                    <span>Team Size: 4</span>
-                  </div>
-                  <div class="metadata-item">
-                    <svg
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      stroke="currentColor"
-                      stroke-width="2"
-                    >
-                      <circle cx="12" cy="12" r="10"></circle>
-                      <polyline points="12 6 12 12 16 14"></polyline>
-                    </svg>
-                    <span>Time frame: 4 Weeks</span>
-                  </div>
-                  <div class="metadata-item">
-                    <svg
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      stroke="currentColor"
-                      stroke-width="2"
-                    >
-                      <path
-                        d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"
-                      ></path>
-                      <polyline points="15 3 21 3 21 9"></polyline>
-                      <line x1="10" y1="14" x2="21" y2="3"></line>
-                    </svg>
-                    <span>Engine: Vulkan/EnTT (C++)</span>
+          
+              <div class="project-info-grid">
+                <div class="info-box">
+                  <h3>About</h3>
+                  <p>
+                    A school project developed with my team 'Orange Outlaws',
+                    built with custom rendering using Vulkan 3D API and EnTT for
+                    entity management. Project focused on implementing
+                    pixel-perfect collision detection and responsive controls.
+                  </p>
+                </div>
+          
+                <div class="info-box">
+                  <h3>Project Info</h3>
+                  <div class="project-metadata">
+                    <div class="metadata-item">
+                      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                        <circle cx="9" cy="7" r="4"></circle>
+                        <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                        <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                      </svg>
+                      <span>Team Size: 4</span>
+                    </div>
+                    <div class="metadata-item">
+                      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="12" cy="12" r="10"></circle>
+                        <polyline points="12 6 12 12 16 14"></polyline>
+                      </svg>
+                      <span>Time frame: 4 Weeks</span>
+                    </div>
+                    <div class="metadata-item">
+                      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                        <polyline points="15 3 21 3 21 9"></polyline>
+                        <line x1="10" y1="14" x2="21" y2="3"></line>
+                      </svg>
+                      <span>Engine: Vulkan/EnTT (C++)</span>
+                    </div>
                   </div>
                 </div>
               </div>
+          
+              <div class="project-content">
+                <h3>Introduction</h3>
+                <p>
+                  I worked with Team Orange Outlaws at Full Sail University to transform a top-down shooter into an engaging 2D platformer in just 4 weeks. Working alongside Sebastian Ramirez Bejarano, Jeylon Guidi, and Anthony Tartaglia, we created a game that combines the precise jumping mechanics of "Jump King" with classic platforming elements reminiscent of Mario and Donkey Kong. The project was built entirely using the Vulkan 3D API for rendering and EnTT for entity management, featuring a data-driven design that allows for runtime configuration of game elements.
+                </p>
+          
+                <h3>Technical Implementation</h3>
+                <p>
+                    As a Gameplay Programmer for the project, I focused on implementing core gameplay features that would enhance the player experience. A key system I developed was the score and collectibles system, which required precise collision detection and real-time score tracking. Working directly with Vulkan and EnTT, I implemented a system that could efficiently detect coin collections and update the player's score in real-time.
+                  </p>
+                  <p>
+                    The scoring system required careful integration with our game's entity component system. Each coin needed to be tracked and managed efficiently, with proper collision response and score updating. I developed an optimized approach that could handle multiple coin collections without impacting game performance, while ensuring accurate score tracking and display updates.
+                  </p>
+                  <!-- Media  -->
+                  <div class="content-media-container">
+                    <div class="media-row">
+                        <div class="media-item">
+                            <img src="images/CoinCollisionCode.png" alt="Coin Collision Code" />
+
+                            <div class="media-caption">
+                                Coin Collision Code Snippet
+                            </div>
+                        </div>
+                        <div class="media-item">
+                            <video autoplay loop muted playsinline>
+                                <source src="videos/JumpingJackCoinandGoal.mp4" type="video/mp4" />
+                            </video>
+                            <div class="media-caption">
+                                Coin Collection
+                            </div>
+                        </div>
+                    </div>
+                </div>
+          
+                <h3>Camera System Development</h3>
+                <p>
+                    One of my key gameplay contributions was the implementation of our camera tracking system. For a platformer where precise jumping is critical, having the right camera behavior is essential to gameplay. I developed a dynamic camera system that smoothly follows the player while maintaining gameplay clarity - a crucial feature for a precision platformer.
+                  </p>
+                  <p>
+                    The camera system needed to maintain a consistent distance from the player while accounting for the game's 2D nature. I implemented a position-based tracking system that uses the player's coordinates to calculate optimal camera positioning, ensuring players always have a clear view of their landing zones and upcoming platforms. The real challenge came in ensuring smooth movement that felt natural while never interfering with the precise control needed for difficult jumps.
+                  </p>
+          
+                <h3>Asset Pipeline Challenges</h3>
+                <p>
+                  Working with Blender for the first time presented a unique set of challenges. Our game engine required specific file formats and JSON configurations for models, making the export process particularly complex. Initially, I struggled with issues ranging from missing textures to incorrect model orientations. This led me to develop a deeper understanding of 3D modeling pipelines and asset management.
+                </p>
+                <p>
+                  I spent considerable time learning Blender's export settings and creating a reliable workflow for our UI elements. This experience proved invaluable, as it gave me hands-on experience with the entire asset pipeline, from creation to implementation.
+                </p>
+                <div class="content-media-container">
+                    <div class="media-row">
+                        <div class="media-item">
+                            <img src="images/CoinBefore.png" alt="Technical diagram of the camera system" />
+                            <div class="media-caption">
+                                Coin model missing texture and wrong orientation
+                            </div>
+                        </div>
+                        <div class="media-item">
+                            <img src="images/CoinAfter.png" alt="Technical diagram of the camera system" />
+                            <div class="media-caption">
+                                Coin model with correct texture and orientation
+                            </div>
+                        </div>
+                    </div>
+                </div>
+          
+                <h3>Performance Optimization</h3>
+                <p>
+                  One of the most significant technical challenges I faced was optimizing the HUD system. My initial implementation created new entities for each frame update, which quickly led to performance issues. Through careful analysis and profiling, I developed a more efficient approach.
+                </p>
+                <p>
+                  Instead of creating new entities, I implemented a pool of reusable models for the HUD elements. This significantly reduced memory allocation overhead. The system now only updates transforms and swaps meshes when absolutely necessary, such as when the score changes or the player loses a life.
+                </p>
+          
+                <h3>What I Learned</h3>
+                <ul class="learning-points">
+                  <li>Gained hands-on experience with low-level game development using Vulkan API for rendering and EnTT for entity management</li>
+                  <li>Developed efficient resource management skills through implementing optimized gameplay systems like score tracking and camera control</li>
+                  <li>Mastered 3D model integration pipeline from Blender to game engine, including handling various file formats and JSON configurations</li>
+                  <li>Improved problem-solving abilities by overcoming challenges in implementing precise collision detection and responsive player controls</li>
+                  <li>Enhanced understanding of performance optimization techniques through the development of efficient gameplay mechanics</li>
+                  <li>Learned the importance of thorough planning in game development, especially when working with custom engines and specific technical requirements</li>
+                </ul>
+              </div>
             </div>
           </div>
-        </div>
         <!-- Project 2 Details -->
         <div id="project2-details" class="project-details-view">
           <div class="container">
@@ -601,6 +659,9 @@
                   type="video/mp4"
                 />
               </video>
+              <div class="project-title-bar">
+                <h3>Era Code</h3>
+            </div>
             </div>
 
             <div class="project-info-grid">
@@ -690,6 +751,9 @@
                   type="video/mp4"
                 />
               </video>
+              <div class="project-title-bar">
+                <h3>Project Elysium</h3>
+            </div>
             </div>
 
             <div class="project-info-grid">
@@ -755,6 +819,7 @@
             </div>
           </div>
         </div>
+        <!-- Project 4 Details -->
         <div id="project4-details" class="project-details-view">
           <div class="container">
             <a class="back-button" onclick="hideProjectDetails('project4')">
@@ -779,6 +844,9 @@
                   type="video/mp4"
                 />
               </video>
+              <div class="project-title-bar">
+                <h3>Floor Zero</h3>
+            </div>
             </div>
 
             <div class="project-info-grid">
