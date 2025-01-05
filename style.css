@@ -824,6 +824,14 @@ footer {
     .project-info-grid {
         grid-template-columns: 1fr;
     }
+
+    .info-box p {
+        font-size: 0.9rem;
+    }
+
+    .metadata-item {
+        font-size: 0.8rem;
+    }
     
     .project-demo {
         margin-bottom: 1.5rem;
@@ -844,7 +852,7 @@ footer {
     }
 
     .project-details-view {
-        padding: 1rem;
+        padding: 0.01rem;
     }
 
     /* Adjust project content */
@@ -855,16 +863,25 @@ footer {
     }
 
     .project-content h3 {
-        font-size: 1.3rem;
+        font-size: 1.1rem;
         margin: 2rem 0 1rem 0;
         width: 100%;
     }
 
     .project-content p {
-        font-size: 1rem;
+        font-size: 0.8rem;
         line-height: 1.6;
         margin-bottom: 1rem;
         width: 100%;
+    }
+
+    .project-title-bar h3 {
+        font-size: 1.3rem;
+        padding-right: 3rem;
+    }
+
+    .learning-points li {
+        font-size: 0.8rem;
     }
 
     /* Media adjustments */
