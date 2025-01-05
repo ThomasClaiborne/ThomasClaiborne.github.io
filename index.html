@@ -724,6 +724,124 @@
                 </div>
               </div>
             </div>
+            <div class="project-content">
+                <h3>Introduction</h3>
+                <p>
+                    Era Code is a top-down defense shooter that I developed solo using Unity as part of my first game jam 'Devtober', where developers create and submit a game by the end of October. In this game, players take on the role of a "Decoder" resistance member fighting against the Synthionix corporation, using a unique "DECODE Glove" to generate weapons and abilities. The game combines strategic defensive gameplay with deep progression systems, challenging players to defend their position against waves of synthetic enemies called 'Synthoids'.
+                  </p>
+              
+                <h3>Weapon Systems & Combat Design</h3>
+                <p>
+                  One of my proudest achievements in this project was designing and implementing a comprehensive weapon system that emphasizes player choice and progression. Each weapon category (SMGs, ARs, pistols, rocket launchers, and LMGs) features unique characteristics including damage outputs, fire rates, and magazine capacities. I implemented a special slot system where the first slot is reserved for pistols with infinite ammo as a reliable fallback option, while the remaining four slots can accommodate any other weapon type, encouraging strategic loadout decisions.
+                </p>
+                <p>
+                  The weapon system includes visual feedback elements such as distinctive bullet tracers for different weapon types, creating a more immersive combat experience. Each weapon's behavior and statistics are fully configurable, allowing for easy balancing and expansion of the arsenal.
+                </p>
+              
+                <div class="content-media-container">
+                    <div class="media-row">
+                        <div class="media-item">
+                            <video autoplay loop muted playsinline>
+                                <source src="videos/EraCode/EraCodeWeaponShowcaseOne.mp4" type="video/mp4" />
+                            </video>
+                            <div class="media-caption">
+                                Pistol and Sniper Showcase
+                            </div>
+                        </div>
+                        <div class="media-item">
+                            <video autoplay loop muted playsinline>
+                                <source src="videos/EraCode/EraCodeWeaponShowcaseTwo.mp4" type="video/mp4" />
+                            </video>
+                            <div class="media-caption">
+                                SMG and LMG Showcase
+                            </div>
+                        </div>
+                    </div>
+                </div>
+              
+                <h3>Economy & Progression Framework</h3>
+                <p>
+                  I developed an intuitive economy system centered around "Synthium" - a resource players earn through combat and level completion. This system integrates seamlessly with the weapon shop and progression mechanics, where players can purchase, upgrade, and manage their arsenal. The shop interface dynamically updates to show level-locked weapons, available upgrades, and ammunition stocks, all tied to the player's progression.
+                </p>
+                <p>
+                  The inventory system I crafted maintains persistent data across gaming sessions, tracking unlocked weapons, equipped loadouts, ammunition counts, and currency. This required implementing a robust save/load system that preserves player progress and loadout configurations between levels and game sessions.
+                </p>
+              
+                <div class="content-media-container">
+                    <div class="media-row">
+                        <div class="media-item">
+                            <video autoplay loop muted playsinline>
+                                <source src="videos/EraCode/EraCodeWeaponShop.mp4" type="video/mp4" />
+                            </video>
+                            <div class="media-caption">
+                                Weapon Shop 
+                            </div>
+                        </div>
+                    </div>
+                </div>
+              
+                <h3>Dynamic Wave System Architecture</h3>
+                <p>
+                  I engineered a flexible wave spawning system that balances complexity with designer usability. The system uses configurable spawn intervals and waypoints, allowing for precise control over enemy spawn timing, locations, and behaviors. Each wave can be customized to create varying intensity levels, from methodical encounters to overwhelming hordes, with clear signaling to players about wave types (normal, horde, or boss waves).
+                </p>
+                <p>
+                  A key optimization I implemented was streamlining the spawn interval configuration. Initially requiring individual enemy spawn definitions, I redesigned the system to use duration-based spawn intervals with frequency controls, significantly improving both system performance and level design efficiency.
+                </p>
+                
+                <div class="content-media-container">
+                    <div class="media-row">
+                        <div class="media-item">
+                            <img src="images/EraCode/WaveOneConfig.png" alt="Initial concept" />
+                            <div class="media-caption">
+                                Wave One configuration and Level Manager
+                            </div>
+                        </div>
+                        <div class="media-item">
+                            <img src="images/EraCode/WaveTwoConfig.png" alt="Initial concept" />
+                            <div class="media-caption">
+                                Wave Two configuration
+                            </div>
+                        </div>
+                        <div class="media-item">
+                            <img src="images/EraCode/WaveThreeConfig.png" alt="Final result" />
+                            <div class="media-caption">
+                                Wave Three configuration
+                            </div>
+                        </div>
+                    </div>
+                </div>
+              
+                <h3>Advanced Enemy Behavior System</h3>
+                <p>
+                  I developed an efficient enemy pathing system that evolved from a traditional NavMesh approach to a more optimized waypoint-based solution. This not only reduced level setup time and memory usage but also provided more precise control over enemy movement patterns. The system uses predefined paths from spawn points to attack positions, creating natural-looking enemy advancement patterns.
+                </p>
+                <p>
+                  To solve the challenge of enemy clustering, I implemented a sophisticated attack point system with front and back row positions. This system includes a queue-based position management algorithm that ensures enemies naturally spread out along the defensive wall, creating more tactical combat scenarios while maintaining performance with large enemy counts.
+                </p>
+              
+                <div class="content-media-container">
+                    <div class="media-row">
+                        <div class="media-item">
+                            <video autoplay loop muted playsinline>
+                                <source src="videos/EraCode/EraCodeEnemyBehavior.mp4" type="video/mp4" />
+                            </video>
+                            <div class="media-caption">
+                                Visual on enemy waypoint and scatter behavior 
+                            </div>
+                        </div>
+                    </div>
+                </div>
+              
+                <h3>What I Learned</h3>
+                <ul class="learning-points">
+                  <li>Strengthened competency in complex gameplay systems design and implementation while maintaining clean, maintainable code architecture</li>
+                  <li>Developed skills in optimizing game systems, transforming complex mechanics into efficient, scalable solutions</li>
+                  <li>Gained experience in creating designer-friendly tools and systems that balance flexibility with usability</li>
+                  <li>Enhanced problem-solving abilities through iterative development and system optimization</li>
+                  <li>Strengthened proficiency in Unity's toolset while building custom gameplay frameworks</li>
+                  <li>Learned to effectively manage scope and prioritize features as a solo developer</li>
+                </ul>
+              </div>
           </div>
         </div>
         <!-- Project 3 Details -->
