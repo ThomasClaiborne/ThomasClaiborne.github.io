@@ -935,6 +935,130 @@
                 </div>
               </div>
             </div>
+            <div class="project-content">
+                <h3>Introduction</h3>
+                <p>
+                  Working alongside Dennis Bradley and Michael Johnson as team "Vaxis" at Full Sail University, we developed Project Elysium - a third-person zombie shooter with a unique twist. In this action-packed game created over a four-week development cycle, players control a fearless grandmother who must battle through hordes of zombies using an arsenal of weapons to reach Elysium, where her family awaits. The project showcases our ability to blend engaging combat mechanics with character-driven gameplay.
+                </p>
+              
+                <h3>Character Controller Development</h3>
+                <p>
+                  As the primary developer for the character control system, I implemented a robust third-person controller that emphasizes smooth player movement and tactical combat positioning. The camera system features an over-the-shoulder perspective with offset positioning for optimal target visibility, dynamically following mouse input while keeping the character model oriented toward the camera's facing direction.
+                </p>
+                <p>
+                  A significant technical achievement was implementing an advanced crouching mechanism with environment awareness. I developed an algorithm that performs real-time overhead collision detection to prevent clipping issues during state transitions. When a player attempts to stand up under an obstacle, the system maintains the crouched state until sufficient clearance is detected, ensuring seamless player movement throughout complex environments.
+                </p>
+              
+                <div class="content-media-container">
+                    <div class="media-row">
+                        <div class="media-item">
+                            <video autoplay loop muted playsinline>
+                                <source src="videos/Project Elysium/ProjectElysiumMovement.mp4" type="video/mp4" />
+                            </video>
+                            <div class="media-caption">
+                                Third Person Controller Movement
+                            </div>
+                        </div>
+                        <div class="media-item">
+                            <video autoplay loop muted playsinline>
+                                <source src="videos/Project Elysium/ProjectElysiumSmartCrouch.mp4" type="video/mp4" />
+                            </video>
+                            <div class="media-caption">
+                                Smart Crouch Demonstration
+                            </div>
+                        </div>
+                    </div>
+                </div>
+              
+                <h3>Weapon System Implementation</h3>
+                <p>
+                    The combat system I developed features three distinct weapon slots - melee, pistol, and primary weapon - each offering unique tactical advantages. Melee weapons provide area-of-effect damage, capable of engaging multiple enemies simultaneously at close range. Pistols serve as reliable fallback weapons with infinite ammunition, while primary weapons range from rapid-fire SMGs to precision sniper rifles with penetrating rounds.
+                  </p>
+                  <p>
+                    I implemented a critical hit system that rewards precision by dealing increased damage and awarding bonus points for successful headshots. Additionally, I developed an aim-down-sights mechanic that adjusts the camera perspective and provides a focused view, giving players better accuracy for landing their shots. Each weapon type, from shotguns with spread patterns to precise sniper rifles, features unique characteristics that affect their combat effectiveness at different ranges.
+                  </p>
+              
+                  <div class="content-media-container">
+                    <div class="media-row">
+                        <div class="media-item">
+                            <video autoplay loop muted playsinline>
+                                <source src="videos/Project Elysium/ProjectELysiumWeaponShowcase.mp4" type="video/mp4" />
+                            </video>
+                            <div class="media-caption">
+                                Showcase using melee, pistol and primary weapons
+                            </div>
+                        </div>
+                        <div class="media-item">
+                            <video autoplay loop muted playsinline>
+                                <source src="videos/Project Elysium/ProjectElysiunCriticalShot.mp4" type="video/mp4" />
+                            </video>
+                            <div class="media-caption">
+                                Critical Shots
+                            </div>
+                        </div>
+                    </div>
+                </div>
+              
+                <h3>Random Weapon System Design</h3>
+                <p>
+                  One of the most engaging features I crafted was the random weapons crate system. This interactive element provides players with a chance to obtain powerful weapons through a visually dynamic selection process. The system includes a custom animation sequence showing weapons cycling through the crate before revealing the final selection.
+                </p>
+                <p>
+                  To support this feature, I developed a flexible interaction system that allows for customizable prompts and actions. This system manages player proximity detection, input handling, and provides clear visual feedback for all interactive elements in the game environment.
+                </p>
+              
+                <div class="content-media-container">
+                    <div class="media-row">
+                        <div class="media-item">
+                            <video autoplay loop muted playsinline>
+                                <source src="videos/Project Elysium/ProjectElysiumRandomCrate.mp4" type="video/mp4" />
+                            </video>
+                            <div class="media-caption">
+                                Random Weapon Crate cycling through weapons
+                            </div>
+                        </div>
+                    </div>
+                </div>
+              
+                <h3>Combat Feedback Systems</h3>
+                <p>
+                  To enhance player engagement and provide clear gameplay feedback, I implemented a comprehensive combat feedback system. This includes dynamically spawned damage numbers that appear at randomized positions above enemies, providing immediate visual confirmation of successful hits and damage dealt.
+                </p>
+                <p>
+                  Complementing this, I developed an achievement notification system that displays important events through animated UI elements. These notifications stack elegantly in a vertical layout group, showing various accomplishments like zombie kills, critical hits, and item pickups, each with custom enter and exit animations to maintain visual clarity even during intense combat sequences.
+                </p>
+              
+                <div class="content-media-container">
+                    <div class="media-row">
+                        <div class="media-item">
+                            <video autoplay loop muted playsinline>
+                                <source src="videos/Project Elysium/ProjectElysiumDamageNumbers.mp4" type="video/mp4" />
+                            </video>
+                            <div class="media-caption">
+                                Floating Damage Numbers
+                            </div>
+                        </div>
+                        <div class="media-item">
+                            <video autoplay loop muted playsinline>
+                                <source src="videos/Project Elysium/ProjectElysiumUIPopUp.mp4" type="video/mp4" />
+                            </video>
+                            <div class="media-caption">
+                                Accomplishment notifications
+                            </div>
+                        </div>
+                    </div>
+                </div>
+              
+                <h3>What I Learned</h3>
+                <ul class="learning-points">
+                  <li>Gained extensive experience in developing complex third-person character controllers with environmental awareness</li>
+                  <li>Enhanced proficiency in creating modular weapon systems with diverse behavior patterns</li>
+                  <li>Developed skills in implementing interactive gameplay elements with clear visual feedback</li>
+                  <li>Strengthened understanding of Unity's animation and UI systems through combat feedback implementation</li>
+                  <li>Improved ability to create systemic solutions that enhance player experience and gameplay clarity</li>
+                  <li>Learned to effectively collaborate in a small team while maintaining code quality and feature delivery</li>
+                </ul>
+              </div>
           </div>
         </div>
         <!-- Project 4 Details -->
