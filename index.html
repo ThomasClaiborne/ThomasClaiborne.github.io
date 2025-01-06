@@ -1152,6 +1152,99 @@
                 </div>
               </div>
             </div>
+            <div class="project-content">
+                <h3>Introduction</h3>
+                <p>
+                  Floor Zero represents Team Vaxis' first venture into Unity development, created alongside Dennis Bradley and Michael Johnson. This introductory project served as our foundation in understanding Unity's ecosystem while crafting a first-person shooter. The game challenges players to progress through multiple floors, collecting keys and eliminating enemies before confronting a final boss, demonstrating our ability to implement core FPS mechanics while learning the engine.
+                </p>
+              
+                <h3>Combat System Development</h3>
+                <p>
+                  I developed a modular weapon system that forms the core of our combat gameplay. The system features a scroll-wheel weapon selection mechanic and a data-driven weapon configuration framework. Each weapon is fully customizable, allowing for adjustment of models, damage values, ammunition capacity, and reload speeds through a unified configuration system, making it highly extensible for adding new weapons.
+                </p>
+                <p>
+                  The ballistics system I implemented handles projectile behavior with configurable velocities and trajectories, ensuring responsive and satisfying combat encounters. This system's modularity proved valuable for rapid prototyping and balancing of different weapon types throughout development.
+                </p>
+              
+                <div class="content-media-container">
+                    <div class="media-row">
+                        <div class="media-item">
+                            <img src="images/Floor Zero/FloorZeroGunConfig.png" alt="Blender workspace showing model setup" />
+                            <div class="media-caption">
+                                Scriptable Object for Gun configurations
+                            </div>
+                        </div>
+                        <div class="media-item">
+                            <video autoplay loop muted playsinline>
+                                <source src="videos/Floor Zero/FloorZeroWeaponShowcase.mp4" type="video/mp4" />
+                            </video>
+                            <div class="media-caption">
+                                Final implementation in game
+                            </div>
+                        </div>
+                    </div>
+                </div>
+              
+                <h3>Interactive Systems Implementation</h3>
+                <p>
+                  I engineered an interaction system using raycast technology, creating an intuitive way for players to engage with game objects. The system features a customizable detection radius emanating from the camera's centerpoint, allowing for precise yet forgiving interaction zones. This approach significantly improves player experience by reducing the precision required for interaction while maintaining gameplay integrity.
+                </p>
+                <p>
+                  The system includes a dynamic UI feedback component that displays contextual prompts when players can interact with objects. For key pickups specifically, I implemented a clear feedback system that notifies players of their collection progress through on-screen messages, helping maintain clear gameplay communication.
+                </p>
+              
+                <div class="content-media-container">
+                    <div class="media-row">
+                        <div class="media-item">
+                            <video autoplay loop muted playsinline>
+                                <source src="videos/Floor Zero/FloorZeroKeyInteraction.mp4" type="video/mp4" />
+                            </video>
+                            <div class="media-caption">
+                                Interacting with keys
+                            </div>
+                        </div>
+                    </div>
+                </div>
+              
+                <h3>Enemy AI Architecture</h3>
+                <p>
+                  The enemy AI system I developed utilizes Unity's NavMesh technology to create dynamic and engaging opponent behaviors. In their patrol state, enemies employ a configurable radius-based roaming algorithm, selecting and navigating to random points within their designated area. This creates organic-feeling movement patterns that make each encounter feel unique.
+                </p>
+                <p>
+                  I implemented three distinct enemy types, each with unique projectile behaviors that create varied combat scenarios. Basic enemies use direct-fire projectiles, while elite enemies employ predictive shooting by calculating player velocity and projectile travel time. The most advanced type features homing projectiles that actively track the player, creating intense combat scenarios that require different dodging strategies.
+                </p>
+              
+                <div class="content-media-container">
+                    <div class="media-row">
+                        <div class="media-item">
+                            <video autoplay loop muted playsinline>
+                                <source src="videos/Floor Zero/FloorZeroAIPatrol.mp4" type="video/mp4" />
+                            </video>
+                            <div class="media-caption">
+                                Enemy AI patrol behavior
+                            </div>
+                        </div>
+                        <div class="media-item">
+                            <video autoplay loop muted playsinline>
+                                <source src="videos/Floor Zero/FloorZeroEnemyBullets.mp4" type="video/mp4" />
+                            </video>
+                            <div class="media-caption">
+                                Different enemy bullet behaviors
+                            </div>
+                        </div>
+                    </div>
+                </div>
+              
+                <h3>What I Learned</h3>
+                <ul class="learning-points">
+                  <li>Gained foundational understanding of Unity's core systems and workflow</li>
+                  <li>Developed skills in implementing configurable game systems and data-driven design</li>
+                  <li>Enhanced proficiency in AI pathfinding and behavior state management</li>
+                  <li>Learned to create intuitive player interaction systems with clear feedback</li>
+                  <li>Improved ability to implement varied enemy behaviors and combat mechanics</li>
+                  <li>Strengthened understanding of FPS gameplay mechanics and their technical implementation</li>
+                </ul>
+              </div>
           </div>
         </div>
       </div>
