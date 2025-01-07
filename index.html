@@ -1413,16 +1413,19 @@
     </section>
 
     <section id="contact">
-      <div class="container">
-        <h2>Contact Me</h2>
-        <form class="contact-form">
-          <input type="text" placeholder="Name" required />
-          <input type="email" placeholder="Email" required />
-          <textarea placeholder="Message" rows="5" required></textarea>
-          <button type="submit">Send Message</button>
-        </form>
-      </div>
-    </section>
+        <div class="container">
+          <h2>Contact Me</h2>
+          <form class="contact-form" action="https://formspree.io/f/myzzblnn" method="POST">
+            <input type="text" name="name" placeholder="Name" required />
+            <input type="email" name="email" placeholder="Email" required />
+            <textarea name="message" placeholder="Message" rows="5" required></textarea>
+            <button type="submit">Send Message</button>
+          </form>
+          <div class="contact-note">
+            <p>Thanks for reaching out! I'll review your message and get back to you as soon as possible.</p>
+          </div>
+        </div>
+      </section>
 
     <footer>
       <p>&copy; 2025 Thomas Claiborne. All rights reserved.</p>

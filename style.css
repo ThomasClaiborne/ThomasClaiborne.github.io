@@ -182,6 +182,19 @@ body {
   min-height: 100vh;
 }
 
+.contact-note {
+    text-align: center;
+    max-width: 600px;
+    margin: 1.5rem auto 0;
+  }
+  
+  .contact-note p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: var(--text-muted);
+    font-style: italic;
+  }
+
 .container {
   max-width: 1200px;
   margin: 0 auto;
@@ -391,6 +404,7 @@ body {
   font-size: 0.9rem;
   color: var(--text-muted);
   text-align: center;
+  font-style: italic;
 }
 
 .back-button {
