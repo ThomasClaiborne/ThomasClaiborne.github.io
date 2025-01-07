@@ -21,6 +21,24 @@
       </div>
 
       <div class="nav-right">
+
+        <button id="theme-toggle" class="theme-toggle">
+            <svg class="sun-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="12" cy="12" r="5"></circle>
+              <line x1="12" y1="1" x2="12" y2="3"></line>
+              <line x1="12" y1="21" x2="12" y2="23"></line>
+              <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+              <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+              <line x1="1" y1="12" x2="3" y2="12"></line>
+              <line x1="21" y1="12" x2="23" y2="12"></line>
+              <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+              <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+            </svg>
+            <svg class="moon-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+            </svg>
+          </button>
+          
         <a
           href="https://www.linkedin.com/in/trc3/"
           class="social-link"
@@ -1432,117 +1450,142 @@
     </footer>
 
     <script>
-      // Show/hide sections
-      function showSection(sectionId) {
-    // Hide project details if they're showing when switching sections
-    const projectDetails = document.querySelectorAll('.project-details-view');
-    projectDetails.forEach(detail => {
-        detail.classList.remove('active');
-    });
-    const projectsGrid = document.querySelector('.projects-grid');
-    if (projectsGrid) {
-        projectsGrid.style.display = 'grid';
-    }
-
-    // Show selected section
-    document.querySelectorAll("section").forEach((section) => {
-        section.classList.remove("active");
-    });
-    const selectedSection = document.getElementById(sectionId);
-    selectedSection.classList.add("active");
-
-    // Special handling for About section - scroll to top
-    if (sectionId === 'about' || (sectionId === 'contact' && window.innerWidth > 768)) {
-        window.scrollTo({
-            top: 0,
-            behavior: 'smooth'
-        });
-    } else {
-        // For all other sections, scroll to their h2
-        const sectionHeading = selectedSection.querySelector('h2');
-        if (sectionHeading) {
-            const navHeight = document.querySelector('nav').offsetHeight;
-            const headingPosition = sectionHeading.getBoundingClientRect().top + window.scrollY;
-            window.scrollTo({
-                top: headingPosition - navHeight - 20, // 20px padding
-                behavior: 'smooth'
-            });
-        }
-    }
-}
-
-      // Toggle info sections
-      function toggleInfo(type) {
-        const educationInfo = document.getElementById("education-info");
-        const careerInfo = document.getElementById("career-info");
-
-        if (type === "education") {
-          educationInfo.style.display =
-            educationInfo.style.display === "block" ? "none" : "block";
-          careerInfo.style.display = "none";
-        } else {
-          careerInfo.style.display =
-            careerInfo.style.display === "block" ? "none" : "block";
-          educationInfo.style.display = "none";
-        }
-      }
-
-      // Project details functions
-      function showProjectDetails(projectId) {
-    const projectsGrid = document.querySelector('.projects-grid');
-    const projectDetails = document.getElementById(projectId + '-details');
-    
-    projectsGrid.style.display = 'none';
-    projectDetails.classList.add('active');
-
-    // Scroll to the back button position
-    const backButton = projectDetails.querySelector('.back-button');
-    if (backButton) {
-        const navHeight = document.querySelector('nav').offsetHeight;
-        const backButtonPosition = backButton.getBoundingClientRect().top + window.scrollY;
-        window.scrollTo({
-            top: backButtonPosition - navHeight - 20, // 20px padding
-            behavior: 'smooth'
-        });
-    }
-}
-
-      function hideProjectDetails(projectId) {
-        const projectsGrid = document.querySelector(".projects-grid");
-        const projectDetails = document.getElementById(projectId + "-details");
-        const projectsSection = document.getElementById("projects");
-
-        projectDetails.classList.remove("active");
-        projectsGrid.style.display = "grid";
-
-        // Scroll to the projects section h2
-        const sectionHeading = projectsSection.querySelector("h2");
-        if (sectionHeading) {
-          const navHeight = document.querySelector("nav").offsetHeight;
-          const headingPosition =
-            sectionHeading.getBoundingClientRect().top + window.scrollY;
-          window.scrollTo({
-            top: headingPosition - navHeight - 20,
-            behavior: "smooth",
+        // Show/hide sections
+        function showSection(sectionId) {
+          // Hide project details if they're showing when switching sections
+          const projectDetails = document.querySelectorAll('.project-details-view');
+          projectDetails.forEach(detail => {
+              detail.classList.remove('active');
           });
+          const projectsGrid = document.querySelector('.projects-grid');
+          if (projectsGrid) {
+              projectsGrid.style.display = 'grid';
+          }
+  
+          // Show selected section
+          document.querySelectorAll("section").forEach((section) => {
+              section.classList.remove("active");
+          });
+          const selectedSection = document.getElementById(sectionId);
+          selectedSection.classList.add("active");
+  
+          // Update active nav indicator
+          document.querySelectorAll('.nav-center a').forEach(link => {
+              link.classList.remove('active');
+              if (link.getAttribute('onclick').includes(sectionId)) {
+                  link.classList.add('active');
+              }
+          });
+  
+          // Special handling for About section - scroll to top
+          if (sectionId === 'about' || (sectionId === 'contact' && window.innerWidth > 768)) {
+              window.scrollTo({
+                  top: 0,
+                  behavior: 'smooth'
+              });
+          } else {
+              // For all other sections, scroll to their h2
+              const sectionHeading = selectedSection.querySelector('h2');
+              if (sectionHeading) {
+                  const navHeight = document.querySelector('nav').offsetHeight;
+                  const headingPosition = sectionHeading.getBoundingClientRect().top + window.scrollY;
+                  window.scrollTo({
+                      top: headingPosition - navHeight - 20, // 20px padding
+                      behavior: 'smooth'
+                  });
+              }
+          }
         }
-      }
-
-      // Set initial active section
-      // Update your DOMContentLoaded event listener
-      document.addEventListener("DOMContentLoaded", () => {
-        // Reset scroll position
-        window.scrollTo(0, 0);
-
-        // Show initial section
-        showSection("about");
-      });
-
-      // Add this to ensure page starts at top when reloaded
-      window.onbeforeunload = function () {
-        window.scrollTo(0, 0);
-      };
-      
-    </script>
+  
+        // Toggle info sections
+        function toggleInfo(type) {
+          const educationInfo = document.getElementById("education-info");
+          const careerInfo = document.getElementById("career-info");
+  
+          if (type === "education") {
+            educationInfo.style.display =
+              educationInfo.style.display === "block" ? "none" : "block";
+            careerInfo.style.display = "none";
+          } else {
+            careerInfo.style.display =
+              careerInfo.style.display === "block" ? "none" : "block";
+            educationInfo.style.display = "none";
+          }
+        }
+  
+        // Project details functions
+        function showProjectDetails(projectId) {
+          const projectsGrid = document.querySelector('.projects-grid');
+          const projectDetails = document.getElementById(projectId + '-details');
+          
+          projectsGrid.style.display = 'none';
+          projectDetails.classList.add('active');
+  
+          // Scroll to the back button position
+          const backButton = projectDetails.querySelector('.back-button');
+          if (backButton) {
+              const navHeight = document.querySelector('nav').offsetHeight;
+              const backButtonPosition = backButton.getBoundingClientRect().top + window.scrollY;
+              window.scrollTo({
+                  top: backButtonPosition - navHeight - 20, // 20px padding
+                  behavior: 'smooth'
+              });
+          }
+        }
+  
+        function hideProjectDetails(projectId) {
+          const projectsGrid = document.querySelector(".projects-grid");
+          const projectDetails = document.getElementById(projectId + "-details");
+          const projectsSection = document.getElementById("projects");
+  
+          projectDetails.classList.remove("active");
+          projectsGrid.style.display = "grid";
+  
+          // Scroll to the projects section h2
+          const sectionHeading = projectsSection.querySelector("h2");
+          if (sectionHeading) {
+            const navHeight = document.querySelector("nav").offsetHeight;
+            const headingPosition =
+              sectionHeading.getBoundingClientRect().top + window.scrollY;
+            window.scrollTo({
+              top: headingPosition - navHeight - 20,
+              behavior: "smooth",
+            });
+          }
+        }
+  
+        // Theme toggle functionality
+        function toggleTheme() {
+          const currentTheme = document.documentElement.getAttribute('data-theme');
+          const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+          
+          document.documentElement.setAttribute('data-theme', newTheme);
+          localStorage.setItem('theme', newTheme);
+        }
+  
+        // Set initial active section and theme
+        document.addEventListener("DOMContentLoaded", () => {
+          // Reset scroll position
+          window.scrollTo(0, 0);
+  
+          // Show initial section
+          showSection("about");
+  
+          // Set initial theme from localStorage or default to dark
+          const savedTheme = localStorage.getItem('theme') || 'dark';
+          document.documentElement.setAttribute('data-theme', savedTheme);
+  
+          // Add theme toggle click handler
+          const themeToggle = document.getElementById('theme-toggle');
+          if (themeToggle) {
+              themeToggle.addEventListener('click', toggleTheme);
+          }
+        });
+  
+        // Add this to ensure page starts at top when reloaded
+        window.onbeforeunload = function () {
+          window.scrollTo(0, 0);
+        };
+  </script>
   </body>
 </html>

@@ -1,15 +1,61 @@
 /* Root Variables */
 :root {
-  --primary-color: #1a1a1a;
-  --secondary-color: #322d5f;
-  --accent-color: #ddb6f2;
-  --accent-color2: #ffb86c;
-  --accent-color3: #8be9fd;
-  --text-color: #ffffff;
-  --text-muted: #a0a0a0;
-  --card-bg: #242424;
-  --border-color: #333333;
-}
+    /* Existing dark mode variables */
+    --primary-color: #1a1a1a;
+    --secondary-color: #322d5f;
+    --accent-color: #ddb6f2;
+    --accent-color2: #ffb86c;
+    --accent-color3: #8be9fd;
+    --text-color: #ffffff;
+    --text-muted: #a0a0a0;
+    --card-bg: #242424;
+    --border-color: #333333;
+  }
+  
+  /* Light mode colors */
+  [data-theme="light"] {
+    --primary-color: #ffffff;
+    --secondary-color: #f0f0f0;
+    --text-color: #1a1a1a;
+    --text-muted: #666666;
+    --card-bg: #f5f5f5;
+    --border-color: #e0e0e0;
+  }
+  
+  /* Theme toggle button styles */
+  .theme-toggle {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0.5rem;
+    color: var(--text-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .theme-toggle .sun-icon,
+  .theme-toggle .moon-icon {
+    width: 24px;
+    height: 24px;
+  }
+  
+  /* Show/hide icons based on theme */
+  [data-theme="dark"] .sun-icon,
+  [data-theme="light"] .moon-icon {
+    display: none;
+  }
+  
+  /* Maintain contrast for project cards in light mode */
+  [data-theme="light"] .project-info-overlay {
+    background: rgba(0, 0, 0, 0.8);
+    color: white;
+  }
+  
+  /* Adjust hover states for light mode */
+  [data-theme="light"] .project-card:hover {
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  }
 
 /* Base Styles */
 * {
@@ -82,21 +128,37 @@ nav {
 
 /* Section Buttons */
 .nav-center {
-  display: flex;
-  gap: 4rem;
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
-}
+    display: flex;
+    gap: 4rem;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  
+  .nav-center a {
+    position: relative;
+    font-weight: bold;
+    height: 100%; /* Add this */
+    display: flex; /* Add this */
+    align-items: center; /* Add this */
+  }
+  
+  .nav-center a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: var(--accent-color3);
+    transform: scaleX(0); /* Add this */
+    transition: transform 0.3s ease; /* Change this */
+  }
+  
+  .nav-center a.active::after {
+    transform: scaleX(1); /* Change this */
+  }
 
-.nav-center a {
-  color: var(--header-text);
-  text-decoration: none;
-  font-size: 1.2rem;
-  font-weight: 700; /* Made bold */
-  cursor: pointer;
-  transition: color 0.3s ease;
-}
 
 .nav-brand {
   text-align: left;
@@ -122,6 +184,24 @@ nav {
   gap: 1.5rem;
   align-items: center;
 }
+
+.theme-toggle {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    color: var(--text-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 24px; /* Add this to match your social icons */
+  }
+  
+  .social-link {
+    display: flex; /* Add this */
+    align-items: center; /* Add this */
+    height: 24px; /* Add this to match icon height */
+  }
 
 nav ul {
   list-style: none;
@@ -774,6 +854,8 @@ footer {
 
   .nav-center a {
     font-size: 1rem;
+    position: relative;
+    padding-bottom: 0.5rem;
   }
 
   .nav-brand {
