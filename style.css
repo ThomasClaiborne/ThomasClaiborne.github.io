@@ -1,7 +1,7 @@
 /* Root Variables */
 :root {
     /* Existing dark mode variables */
-    --primary-color: #1a1a1a;
+    --primary-color: #141414;
     --secondary-color: #322d5f;
     --accent-color: #ddb6f2;
     --accent-color2: #ffb86c;
@@ -57,6 +57,10 @@
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
   }
 
+  [data-theme="light"] .project-info-overlay .info-item {
+    color: #ffffff; 
+  }
+
 /* Base Styles */
 * {
   margin: 0;
@@ -65,7 +69,7 @@
 }
 
 body {
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-family: 'Inter', sans-serif;
   line-height: 1.6;
   color: var(--text-color);
   background-color: var(--background-color);
@@ -79,6 +83,11 @@ header {
   display: flex;
   align-items: center;
   gap: 4rem;
+}
+
+.nav-brand h1, h1, h2, h3 {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
 }
 
 .header-content {
