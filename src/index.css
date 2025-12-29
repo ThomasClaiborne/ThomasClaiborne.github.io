@@ -1,0 +1,108 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    @apply bg-dark-950 text-dark-100 font-sans antialiased;
+  }
+  
+  /* Custom scrollbar */
+  ::-webkit-scrollbar {
+    width: 8px;
+  }
+  
+  ::-webkit-scrollbar-track {
+    @apply bg-dark-900;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    @apply bg-dark-700 rounded-full;
+  }
+  
+  ::-webkit-scrollbar-thumb:hover {
+    @apply bg-dark-600;
+  }
+  
+  /* Selection */
+  ::selection {
+    @apply bg-primary-500/30 text-primary-100;
+  }
+}
+
+@layer components {
+  .section-container {
+    @apply max-w-6xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+  
+  .section-padding {
+    @apply py-20 lg:py-32;
+  }
+  
+  .gradient-text {
+    @apply bg-gradient-to-r from-primary-400 to-primary-600 bg-clip-text text-transparent;
+  }
+  
+  .card {
+    @apply bg-dark-900/50 border border-dark-800 rounded-xl backdrop-blur-sm;
+  }
+  
+  .card-hover {
+    @apply transition-all duration-300 hover:border-primary-500/50 hover:shadow-lg hover:shadow-primary-500/10;
+  }
+  
+  .btn-primary {
+    @apply px-6 py-3 bg-primary-500 text-dark-950 font-medium rounded-lg 
+           transition-all duration-300 hover:bg-primary-400 hover:shadow-lg hover:shadow-primary-500/25;
+  }
+  
+  .btn-secondary {
+    @apply px-6 py-3 border border-dark-700 text-dark-200 font-medium rounded-lg 
+           transition-all duration-300 hover:border-primary-500 hover:text-primary-400;
+  }
+  
+  .tag {
+    @apply px-3 py-1 text-sm font-mono bg-dark-800 text-dark-300 rounded-full;
+  }
+  
+  .tag-primary {
+    @apply px-3 py-1 text-sm font-mono bg-primary-500/10 text-primary-400 border border-primary-500/20 rounded-full;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+  
+  /* Animated gradient background */
+  .animated-gradient {
+    background: linear-gradient(
+      -45deg,
+      theme('colors.dark.950'),
+      theme('colors.dark.900'),
+      theme('colors.primary.900/30'),
+      theme('colors.dark.900')
+    );
+    background-size: 400% 400%;
+    animation: gradient-shift 15s ease infinite;
+  }
+  
+  @keyframes gradient-shift {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+  }
+  
+  /* Grid pattern overlay */
+  .grid-pattern {
+    background-image: 
+      linear-gradient(to right, theme('colors.dark.800/30') 1px, transparent 1px),
+      linear-gradient(to bottom, theme('colors.dark.800/30') 1px, transparent 1px);
+    background-size: 60px 60px;
+  }
+}
