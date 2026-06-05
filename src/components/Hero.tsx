@@ -73,8 +73,13 @@ export default function Hero() {
             transition={{ delay: 0.6, duration: 0.6 }}
             className="flex flex-wrap justify-center gap-3 pt-4"
           >
-            {['Java', 'Spring Boot', 'React', 'TypeScript', 'AI Integration'].map((tech) => (
+            {(['Java', 'Spring Boot', 'React'] as const).map((tech) => (
               <span key={tech} className="tag-primary">
+                {tech}
+              </span>
+            ))}
+            {(['C#', '.NET', 'Angular', 'TypeScript', 'ASP.NET'] as const).map((tech) => (
+              <span key={tech} className="tag-accent">
                 {tech}
               </span>
             ))}

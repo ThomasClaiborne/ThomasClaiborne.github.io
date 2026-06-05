@@ -54,6 +54,10 @@
   .card-hover {
     @apply transition-all duration-300 hover:border-primary-500/50 hover:shadow-lg hover:shadow-primary-500/10;
   }
+
+  .card-hover-accent {
+    @apply transition-all duration-300 hover:border-blue-500/50 hover:shadow-lg hover:shadow-blue-500/10;
+  }
   
   .btn-primary {
     @apply px-6 py-3 bg-primary-500 text-dark-950 font-medium rounded-lg 
@@ -71,6 +75,10 @@
   
   .tag-primary {
     @apply px-3 py-1 text-sm font-mono bg-primary-500/10 text-primary-400 border border-primary-500/20 rounded-full;
+  }
+
+  .tag-accent {
+    @apply px-3 py-1 text-sm font-mono bg-blue-500/10 text-blue-400 border border-blue-500/20 rounded-full;
   }
 }
 

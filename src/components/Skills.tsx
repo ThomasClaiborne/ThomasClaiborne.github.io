@@ -91,10 +91,7 @@ export default function Skills() {
 
                   <div className="flex flex-wrap gap-2">
                     {category.skills.map((skill) => (
-                      <span
-                        key={skill.name}
-                        className="px-3 py-1.5 text-sm bg-dark-800 text-dark-300 rounded-lg hover:bg-dark-700 hover:text-dark-200 transition-colors"
-                      >
+                      <span key={skill.name} className="tag text-xs">
                         {skill.name}
                       </span>
                     ))}

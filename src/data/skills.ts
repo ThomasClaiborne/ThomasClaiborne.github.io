@@ -3,11 +3,12 @@
 export interface Skill {
   name: string;
   level: 'advanced' | 'proficient' | 'familiar';
+  accent?: 'blue';
 }
 
 export interface SkillCategory {
   title: string;
-  icon: string; // lucide icon name
+  icon: string;
   skills: Skill[];
 }
 
@@ -29,11 +30,13 @@ export const skillCategories: SkillCategory[] = [
     icon: 'Server',
     skills: [
       { name: 'Spring Boot', level: 'proficient' },
-      { name: 'Spring AI', level: 'proficient' },
+      { name: 'ASP.NET Core', level: 'proficient', accent: 'blue' },
+      { name: 'Entity Framework Core', level: 'proficient', accent: 'blue' },
       { name: 'REST APIs', level: 'advanced' },
       { name: 'JPA/Hibernate', level: 'proficient' },
       { name: 'PostgreSQL', level: 'proficient' },
       { name: 'JUnit/Mockito', level: 'proficient' },
+      { name: 'xUnit', level: 'proficient', accent: 'blue' },
     ],
   },
   {
@@ -41,6 +44,7 @@ export const skillCategories: SkillCategory[] = [
     icon: 'Layout',
     skills: [
       { name: 'React', level: 'proficient' },
+      { name: 'Angular', level: 'proficient', accent: 'blue' },
       { name: 'Tailwind CSS', level: 'proficient' },
       { name: 'Vite', level: 'proficient' },
       { name: 'HTML/CSS', level: 'advanced' },
@@ -72,7 +76,7 @@ export const skillCategories: SkillCategory[] = [
 export const coreStrengths = [
   {
     title: 'Full-Stack Development',
-    description: 'Building end-to-end applications with Spring Boot backends and React frontends',
+    description: 'Building end-to-end applications across both the Java and .NET ecosystems, with Spring Boot and ASP.NET Core backends paired with React and Angular frontends.',
     icon: 'Layers',
   },
   {

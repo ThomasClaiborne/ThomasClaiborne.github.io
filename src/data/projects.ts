@@ -8,6 +8,7 @@ export interface Project {
   description: string;
   category: 'fullstack' | 'game' | 'systems';
   featured: boolean;
+  accent?: 'blue';
   techStack: string[];
   highlights: string[];
   links: {
@@ -24,12 +25,36 @@ export interface Project {
 
 export const projects: Project[] = [
   {
+    id: 'wealthview',
+    title: 'WealthView',
+    tagline: 'Full-stack investment portfolio simulator',
+    description: 'A production-grade investment simulator built with ASP.NET Core 9 and Angular 21. Users fund accounts via bank transfers, execute trades at live Alpha Vantage prices, track holdings with computed P&L, and view portfolio performance on a Chart.js dashboard.',
+    category: 'fullstack',
+    featured: true,
+    accent: 'blue' as const,
+    techStack: ['C#', 'ASP.NET Core 9', 'Entity Framework Core', 'Angular 21', 'TypeScript', 'MySQL', 'xUnit', 'JWT', 'Alpha Vantage API'],
+    highlights: [
+      'Built full vertical slices: EF Core repositories → xUnit tests → service layer → REST controllers → Angular components',
+      'Integrated Alpha Vantage live market data with burst rate-limit handling',
+      'Resolved three Angular race conditions with sequential chaining and deferred Chart.js canvas access',
+      'Implemented JWT auth, BCrypt hashing, dark mode, and immutable trade audit log',
+    ],
+    links: {
+      github: 'https://github.com/ThomasClaiborne/WealthView',
+    },
+    metrics: [
+      { label: 'Tech Stack', value: 'ASP.NET + Angular' },
+      { label: 'API Endpoints', value: '30+ REST' },
+      { label: 'Test Suite', value: 'xUnit' },
+    ],
+  },
+  {
     id: 'ai-note-cleaner',
     title: 'AI Note Cleaner',
     tagline: 'Full-stack AI-powered note transformation',
     description: 'A production-ready web application that transforms messy notes into structured, readable content using local LLM integration. Features a Spring Boot backend with RESTful API, React frontend, and comprehensive test coverage.',
     category: 'fullstack',
-    featured: true,
+    featured: false,
     techStack: ['Java 21', 'Spring Boot 3.4', 'Spring AI', 'React 18', 'TypeScript', 'Tailwind CSS', 'PostgreSQL', 'Ollama'],
     highlights: [
       'Built layered architecture with JPA entities, DTOs, and Spring Data repositories',
